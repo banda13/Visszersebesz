@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dad2bfd-142c-4e80-ac93-4c85d863a537" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/viszersebesz.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/read_google_api_key.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/resources/google_keys.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/delej.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/w3.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/vascular_stock.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/introduction.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/keywords.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/knowledge.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/q_and_a.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/visszersebesz_blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/welcome.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -44,9 +42,16 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Szabó András\PhpstormProjects\viszersebesz\html" />
+      <recent name="C:\Users\Szabó András\PhpstormProjects\viszersebesz\css" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -72,7 +77,7 @@
       <updated>1583761343893</updated>
       <workItem from="1583761345726" duration="11330000" />
       <workItem from="1583920090949" duration="716000" />
-      <workItem from="1583923209574" duration="3790000" />
+      <workItem from="1583923209574" duration="7540000" />
     </task>
     <servers />
   </component>
