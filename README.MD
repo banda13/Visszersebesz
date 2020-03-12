@@ -17,5 +17,5 @@ Main tasks: (just a few thought)
 - Add google analytics
 - Responsive design (Phone + Tv everything)
 - Multi language?
-- Blog: easy to add new post functionality. (need backend implementations probably)
+- Blog: easy to add new post functionality. (need backend implementations probably) - ALMOST DONE
 - Release it

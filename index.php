@@ -151,7 +151,7 @@
                 script_tag.setAttribute("type", "text/javascript");
 
                 //TODO add some (more) security!
-                $.get("/api/read_google_api_key.php?key=google_map", function (mapKey) {
+                $.get("/api/read_api_keys.php?key=google_map", function (mapKey) {
                     script_tag.setAttribute("src", "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&callback=gMapsCallback");
                     (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
                 });
@@ -182,5 +182,20 @@
             loadGoogleMaps();
         });
     </script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+
+<script>
+
+    $.get("/api/read_api_keys.php?key=firebase", function (firebaseConfig) {
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    });
+
+</script>
 </body>
 </html>

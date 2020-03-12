@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dad2bfd-142c-4e80-ac93-4c85d863a537" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/blog/read_posts_name.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/utils.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/posts/korona1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/posts/korona2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blog/posts_content/korona1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/w3.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/blog_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/contact_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/introduction_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/keywords.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/keywords_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/knowledge.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/knowledge_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/q_and_a.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/q_and_a_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/references_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/visszersebesz_blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/navigation_section.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/welcome_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/read_google_api_key.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/read_api_keys.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
