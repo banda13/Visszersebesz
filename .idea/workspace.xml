@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dad2bfd-142c-4e80-ac93-4c85d863a537" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/html/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/introduction.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/keywords.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/knowledge.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/q_and_a.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/visszersebesz_blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/welcome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/blog/read_posts_name.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/utils.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/posts/korona1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/posts/korona2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/posts_content/korona1.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/w3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/blog_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/contact_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/introduction.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/introduction_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/keywords.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/keywords_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/knowledge.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/knowledge_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/q_and_a.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/q_and_a_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/references_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/visszersebesz_blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/navigation_section.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/welcome_section.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,12 +53,19 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/blog/posts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Visszersebesz\api\blog\posts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Szabó András\PhpstormProjects\viszersebesz\html" />
-      <recent name="C:\Users\Szabó András\PhpstormProjects\viszersebesz\css" />
+      <recent name="D:\Projects\Visszersebesz\api\blog" />
+      <recent name="D:\Projects\Visszersebesz" />
+      <recent name="D:\Projects\Visszersebesz\api\blog\posts_content" />
+      <recent name="D:\Projects\Visszersebesz\api\blog\posts\article_content" />
+      <recent name="D:\Projects\Visszersebesz\api\external" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -85,10 +100,15 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="604" y="337" key="NewPhpFileDialog" timestamp="1583923309786">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1010" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1583958336906">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1010" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1040/-1366.60.1366.728@0.0.2560.1040" timestamp="1583958336906" />
+    <state x="1007" y="425" key="NewPhpFileDialog" timestamp="1584022564121">
+      <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="604" y="337" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1583923309786" />
+    <state x="1007" y="425" key="NewPhpFileDialog/0.0.2560.1040/-1366.60.1366.728@0.0.2560.1040" timestamp="1584022564121" />
     <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1583923253267">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -97,5 +117,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="406" y="28" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1583769605293" />
+    <state x="290" y="180" width="670" height="676" key="search.everywhere.popup" timestamp="1584025319944">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="290" y="180" width="670" height="676" key="search.everywhere.popup/0.0.2560.1040/-1366.60.1366.728@0.0.2560.1040" timestamp="1584025319944" />
   </component>
 </project>

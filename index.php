@@ -3,8 +3,7 @@
 <title>Visszér sebész</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
-<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="css/delej.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -27,7 +26,7 @@
     /* First image (Logo. Full height) */
     .bgimg-1 {
         background-image: url('/images/vascular_stock.jpg');
-        min-height: 100%;
+        min-height: 50%;
     }
 
     /* Create a Parallax Effect */
@@ -56,45 +55,7 @@
 </style>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-    <div class="w3-bar w3-dark-gray" id="navigation_bar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
-           onclick="toggleFunction()" title="Toggle Navigation Menu">
-            <i class="fa fa-bars"></i>
-        </a>
-        <a href="#home" class="w3-bar-item w3-button">HOME</a>
-        <a href="#welcome_container" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-"></i>Köszöntő</a>
-        <a href="#introduction_container" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Bemutatkozás</a>
-        <a href="#contact_container" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-phone"></i>
-            Munkahelyek/elérhetőségek</a>
-        <a href="#knowledge_container" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-book"></i> Érbetegségek –
-            alapismeretek és műtétek</a>
-        <a href="#blog_container" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-search"></i> Blog</a>
-        <a href="#q_and_a_container" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-users"></i> Orvos válaszol</a>
-        <a href="#references_container" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-link"></i> Hivatkozások</a>
-        <a href="#keywords_container" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-font"></i> Kulcsszavak</a>
-
-
-        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-            <i class="fa fa-search"></i>
-        </a>
-    </div>
-
-    <!-- Navbar on small screens -->
-    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-        <a href="#welcome_container" class="w3-bar-item w3-button" onclick="toggleFunction()">Köszöntő</a>
-        <a href="#introduction_container" class="w3-bar-item w3-button" onclick="toggleFunction()">Bemutatkozás</a>
-        <a href="#contact_container" class="w3-bar-item w3-button" onclick="toggleFunction()">Munkahelyek/elérhetőségek</a>
-        <a href="#knowledge_container" class="w3-bar-item w3-button" onclick="toggleFunction()">Érbetegségek –
-            alapismeretek és műtétek</a>
-        <a href="#blog_container" class="w3-bar-item w3-button" onclick="toggleFunction()">Blog</a>
-        <a href="#q_and_a_container" class="w3-bar-item w3-button" onclick="toggleFunction()">Orvos válaszol</a>
-        <a href="#references_container" class="w3-bar-item w3-button" onclick="toggleFunction()">Hivatkozások</a>
-        <a href="#keywords_container" class="w3-bar-item w3-button" onclick="toggleFunction()">Kulcsszavak</a>
-
-        <a href="#" class="w3-bar-item w3-button">Keresés</a>
-    </div>
+<div class="w3-top" id="navigation_container">
 </div>
 
 <!-- First Parallax Image with Logo Text -->
@@ -151,29 +112,30 @@
 
             // Load modules
             $(function(){
-                $("#welcome_container").load("html/welcome.html");
+                $("#navigation_container").load("html/navigation_section.html", function(){
+                    window.onscroll = function () {
+                        myFunction()
+                    };
+                });
+                console.log("Navigation section loaded");
+
+                $("#welcome_container").load("html/welcome_section.html");
                 console.log("Welcome section loaded");
-                $("#introduction_container").load("html/introduction.html");
+                $("#introduction_container").load("html/introduction_section.html");
                 console.log("Introduction section loaded");
-                $("#contact_container").load("html/contact.html");
+                $("#contact_container").load("html/contact_section.html");
                 console.log("Contact section loaded");
-                $("#knowledge_container").load("html/knowledge.html");
+                $("#knowledge_container").load("html/knowledge_section.html");
                 console.log("Knowledge section loaded");
-                $("#blog_container").load("html/blog.html");
+                $("#blog_container").load("html/blog_section.html");
                 console.log("Blog section loaded");
-                $("#q_and_a_container").load("html/q_and_a.html");
+                $("#q_and_a_container").load("html/q_and_a_section.html");
                 console.log("Q and A section loaded");
-                $("#references_container").load("html/references.html");
+                $("#references_container").load("html/references_section.html");
                 console.log("References section loaded");
-                $("#keywords_container").load("html/keywords.html");
+                $("#keywords_container").load("html/keywords_section.html");
                 console.log("Keywords section loaded");
             });
-
-
-            // Change style of navbar on scroll
-            window.onscroll = function () {
-                myFunction()
-            };
 
             function myFunction() {
                 var navbar = document.getElementById("navigation_bar");
