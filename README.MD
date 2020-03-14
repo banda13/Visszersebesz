@@ -16,6 +16,6 @@ Main tasks: (just a few thought)
 - Check security
 - Add google analytics
 - Responsive design (Phone + Tv everything)
-- Multi language?
+- Multi language? - LATER
 - Blog: easy to add new post functionality. (need backend implementations probably) - ALMOST DONE
 - Release it
