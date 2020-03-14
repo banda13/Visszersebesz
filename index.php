@@ -152,6 +152,7 @@
 
                 //TODO add some (more) security!
                 $.get("/api/read_api_keys.php?key=google_map", function (mapKey) {
+                    mapKey = mapKey.replace(new RegExp('"', 'g'), '');
                     script_tag.setAttribute("src", "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&callback=gMapsCallback");
                     (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
                 });
@@ -192,7 +193,7 @@
 <script>
 
     $.get("/api/read_api_keys.php?key=firebase", function (firebaseConfig) {
-        firebase.initializeApp(firebaseConfig);
+        firebase.initializeApp(JSON.parse(firebaseConfig));
         firebase.analytics();
     });
 
