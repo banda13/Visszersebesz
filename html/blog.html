@@ -1,0 +1,22 @@
+<div class="w3-content w3-container w3-padding-64" id="blog">
+    <h2 class="w3-center">Blog</h2>
+    <div id="blog_container"></div>
+
+<script>
+    $(document).ready(function () {
+        $.get("/api/blog/read_posts_name.php", function (posts_name) {
+            console.log(posts_name);
+            let arr = JSON.parse(posts_name);
+
+            for (let i = 0; i < arr.length; i++) {
+                let name = arr[i];
+                let id = name.replace(".html", "");
+                console.log(name);
+                $("#blog_container").append("<div id='" + id + "'</div>");
+                $("#" + id).load("blog/posts/" + name);
+            }
+        });
+    });
+</script>
+
+</div>
