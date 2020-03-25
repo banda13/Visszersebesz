@@ -10,8 +10,6 @@
 
 <link rel="shortcut icon" href="#"> <!-- TODO make own icon -->
 
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <style>
     body, h1, h2, h3, h4, h5, h6 {
         font-family: "Lato", sans-serif;
@@ -81,6 +79,9 @@
 
     <div id="keywords_container"></div>
 
+    <!-- Tempolary section (modals etc)-->
+
+    <div id="corona_modal_container"></div>
 
 <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
@@ -96,6 +97,16 @@
         <p>Powered by <i>Andy</i></p>
     </footer>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
+
+<!--https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
+
+<!-- JQuery -->>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <script>
         // Used to toggle the menu on small screens when clicking on the menu button
         function toggleFunction() {
@@ -107,9 +118,8 @@
             }
         }
 
+
         $(document).ready(function () {
-
-
             // Load modules
             $(function(){
                 $("#navigation_container").load("html/navigation_section.html", function(){
@@ -135,6 +145,11 @@
                 console.log("References section loaded");
                 $("#keywords_container").load("html/keywords_section.html");
                 console.log("Keywords section loaded");
+
+                $("#corona_modal_container").load("html/corona_modal.html", function () {
+                    document.getElementById('corona_modal_div').style.display='block';
+                });
+                console.log("Corona modal loaded");
             });
 
             function myFunction() {
@@ -181,17 +196,10 @@
             $(window).bind('gMapsLoaded', initMap);
 
             loadGoogleMaps();
+
         });
     </script>
-
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-app.js"></script>
-
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
-
 <script>
-
     $.get("/api/read_api_keys.php?key=firebase", function (firebaseConfig) {
         firebase.initializeApp(JSON.parse(firebaseConfig));
         firebase.analytics();
