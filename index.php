@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<title>Visszér sebész</title>
+<html lang="hu">
+<title>Dr. Szabó Gábor Viktor Ph.D.,sebész, érsebész szakorvos</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -57,9 +57,13 @@
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-    <div class="w3-display-middle" style="white-space:nowrap;">
-        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Visszér sebész</span>
+<div class="bgimg-1 w3-display-container w3-opacity-min w3-center" id="home">
+    <div class="w3-display-middle w3-center" style="white-space:nowrap;">
+        <div class="w3-center w3-black">
+        <h1 class=" w3-padding-large">Dr. Szabó Gábor Viktor Ph.D.,<br></h1>
+        <h2 class="w3-padding-medium">sebész, érsebész szakorvos</h2>
+        </div>
+        <!--<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"></span>-->
     </div>
 </div>
 
