@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/delej.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 <link rel="shortcut icon" href="#"> <!-- TODO make own icon -->
 
@@ -55,7 +56,7 @@
 <header>
 <div class="w3-top" id="navigation_container">
     <div class="w3-bar w3-dark-gray" id="navigation_bar">
-        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
+        <a class="w3-bar-item w3-button w3-hover-black w3-card-4 w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);"
            onclick="toggleFunction()" title="Toggle Navigation Menu">
             <i class="fa fa-bars"></i>
         </a>
@@ -63,8 +64,16 @@
         <a href="/introduction.php" class="w3-bar-item w3-button w3-hide-small navi"><i class="fa fa-user"></i> Bemutatkozás</a>
         <a href="/contact.php" class="w3-bar-item w3-button w3-hide-small navi"><i class="fa fa-phone"></i>
             Munkahelyek/elérhetőségek</a>
-        <a href="/knowledge.php" class="w3-bar-item w3-button w3-hide-small navi"><i class="fa fa-book"></i> Érbetegségek –
-            alapismeretek és műtétek</a>
+        <div class="w3-dropdown-hover  w3-bar-block w3-dark-gray">
+            <a href="/knowledge.php" class="w3-bar-item w3-button w3-hide-small navi"><i class="fa fa-book"></i> Érbetegségek –
+                alapismeretek és műtétek <i class="fa fa-caret-down"></i></a>
+            <div class="w3-dropdown-content w3-bar-block w3-card-4 ">
+                <a href="#" class="w3-bar-item w3-button">Link 1</a>
+                <a href="#" class="w3-bar-item w3-button">Link 2</a>
+                <a href="#" class="w3-bar-item w3-button">Link 3</a>
+            </div>
+        </div>
+        <a href="/prices.php" class="w3-bar-item w3-button w3-hide-small navi"><i class="fa fa-coins"></i> Árak</a>
         <a href="/blog.php" class="w3-bar-item w3-button w3-hide-small navi"><i class="fa fa-search"></i> Blog</a>
         <a href="/q_and_a.html" class="w3-bar-item w3-button w3-hide-small navi"><i class="fa fa-users"></i> Orvos válaszol</a>
         <a href="/references.html" class="w3-bar-item w3-button w3-hide-small navi"><i class="fa fa-link"></i> Hivatkozások</a>
@@ -78,6 +87,7 @@
         </a>
     </div>
 
+    <!-- TODO need fixes-->
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
         <a href="/" class="w3-bar-item w3-button" onclick="toggleFunction()">Köszöntő</a>
@@ -85,6 +95,7 @@
         <a href="/contact.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Munkahelyek/elérhetőségek</a>
         <a href="/knowledge.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Érbetegségek –
             alapismeretek és műtétek</a>
+        <a href="/prices.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Árak</a>
         <a href="/blog.php" class="w3-bar-item w3-button" onclick="toggleFunction()">Blog</a>
         <a href="/q_and_a.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Orvos válaszol</a>
         <a href="/references.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Hivatkozások</a>
@@ -94,7 +105,7 @@
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min w3-center" id="home">
+<div class="bgimg-1 w3-display-container w3-opacity-min w3-center w3-card-4" id="home">
     <div class="w3-display-middle w3-center" style="white-space:nowrap;">
         <div class="w3-center w3-black">
             <h1 class=" w3-padding-large">Dr. Szabó Gábor Viktor Ph.D.,<br></h1>
@@ -112,6 +123,6 @@
 <!--https://firebase.google.com/docs/web/setup#available-libraries -->
 <script src="https://www.gstatic.com/firebasejs/7.10.0/firebase-analytics.js"></script>
 <!-- JQuery -->
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </header>
