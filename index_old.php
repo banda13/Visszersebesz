@@ -134,6 +134,7 @@
             };
             $(window).bind('gMapsLoaded', initMap);
 
+
             loadGoogleMaps();
 
         });

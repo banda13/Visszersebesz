@@ -1,0 +1,15 @@
+<div>
+    <button id="read_korona1" class="w3-button w3-padding-large w3-margin w3-white w3-border" onclick="window.location.href = '/blog.php'"><b><<  Vissza</b></button>
+</div>
+<div class="w3-content w3-container w3-padding-64" id="blog">
+    <div id="blog_container"></div>
+</div>
+
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    $("#blog_container").load("../blog/posts_content/" + urlParams.get('post') + ".html", function () {
+        console.log("Content loaded");
+    });
+</script>
