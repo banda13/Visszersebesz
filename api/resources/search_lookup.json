@@ -1,0 +1,19 @@
+{
+  "to_short_error" : "",
+  "no_result_error": "",
+  "unexpected_error": "",
+  "lookup_list" :[
+    {
+      "path": "/index.php",
+      "name": "Köszöntő",
+      "lookup_pages_with_section": [
+        {
+          "name": "html/welcome.html",
+          "sections": [
+            "important_fields"
+          ]
+        }
+      ]
+    }
+  ]
+}
