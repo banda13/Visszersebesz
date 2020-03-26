@@ -1,10 +1,9 @@
 <?php echo file_get_contents("html/header.html"); ?>
 
 <?php
-if(isset($_GET['post']))
-{
+if (isset($_GET['post'])) {
     echo file_get_contents("html/blog_post.html");
-}else{
+} else {
     echo file_get_contents("html/blog.html");
 }
 

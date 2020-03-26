@@ -20,6 +20,7 @@
         }
 
         let sote_map, buda_map, vpmed_map;
+
         function initMap() {
 
             // The location of Uluru
@@ -36,7 +37,7 @@
             const vpmed_marker = new google.maps.Marker({position: vpmed_uluru, map: vpmed_map});
         }
 
-        window.gMapsCallback = function(){
+        window.gMapsCallback = function () {
             $(window).trigger('gMapsLoaded');
         };
         $(window).bind('gMapsLoaded', initMap);
