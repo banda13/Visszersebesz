@@ -1,19 +1,16 @@
 {
-  "to_short_error" : "",
-  "no_result_error": "",
-  "unexpected_error": "",
-  "lookup_list" :[
-    {
-      "path": "/index.php",
-      "name": "Köszöntő",
-      "lookup_pages_with_section": [
-        {
-          "name": "html/welcome.html",
-          "sections": [
-            "important_fields"
-          ]
-        }
-      ]
-    }
-  ]
+  "name_mappings": {
+    "blog.php": "BLOG",
+    "contact.php": "MUNKAHELYEK, ELÉRHETŐSÉG",
+    "index.php": "KÖSZÖNTŐ",
+    "introduction.php": "BEMUTATKOZÁS",
+    "knowledge.php": "ÉRBETEGSÉGEK – ALAPISMERETEK ÉS MŰTÉTEK",
+    "prices.php": "ÁRAK",
+    "questions.php": "ORVOS VÁLASZOL",
+    "references.php": "HIVATKOZÁSOK"
+  },
+  "url_mappings": {
+    "welcome.php": "index.php"
+  },
+  "test": "test"
 }
