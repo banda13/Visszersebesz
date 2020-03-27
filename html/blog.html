@@ -1,5 +1,6 @@
 <div class="w3-content w3-container w3-padding-64" id="blog">
     <h2 class="w3-center">Blog</h2>
+    <hr>
     <div id="blog_container"></div>
 </div>
 
@@ -10,7 +11,6 @@
             let arr = JSON.parse(posts_name);
 
             for (let i = 0; i < arr.length; i++) {
-                prev_loaded = false;
                 let name = arr[i];
                 let id = name.replace(".html", "");
                 console.log(name);
