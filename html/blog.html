@@ -17,7 +17,7 @@
                 $("#blog_container").append("<div id='" + id + "' style='display: None'></div>");
 
                 $("#" + id).load("blog/posts/" + name, function () {
-                    $("#" + id).fadeToggle("slow");
+                    $("#" + id).fadeIn("slow");
                     $("#read_" + id).on("click", function () {
                         window.location.href = '/blog.php?post=' + name.replace(".html", "");
                     });

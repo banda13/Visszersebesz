@@ -179,8 +179,8 @@
         var num_of_tables = 2;
         for (let j = 0; j < num_of_tables; j++) {
             for (let i = 0; i < num_references; i++) {
-                $("#ref" + j + "" + i).fadeToggle('slow');
-                //await sleep(1);
+                $("#ref" + j + "" + i).fadeIn('slow');
+                await sleep(100);
             }
         }
     }
