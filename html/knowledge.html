@@ -1,29 +1,40 @@
+<link rel="stylesheet" href="/css/modal_image.css">
+
 <div class="w3-content w3-container w3-padding-64" id="knowledge">
     <h2 class="w3-center">ÉRBETEGSÉGEK – ALAPISMERETEK ÉS MŰTÉTEK</h2>
     <hr>
 
     <div id="section00"></div>
-    <div class="w3-container">
-        <h3>Artériás betegségek</h3>
-    </div>
-    <div class="w3-container" id="section0">
+    <div class="w3-container jumbotron">
+        <h3 class="w3-center">Artériás betegségek</h3><br>
         <div>
             <h4>Nyaki erek (carotis) betegségei, stroke</h4>
             <ul class="w3-ul">
                 <li>
-                    <h5>Kórkép</h5>
+                    <h5><strong>Kórkép</strong></h5>
                     <p>A nyaki érben az érelmeszesedés (atherosclerosis) miatt
                         kialakuló meszes plakk szűkíti az eret, róla kis darabok (mész vagy thrombus)
                         lesodródhatnak és az agyba feljutva artériás elzáródást okozhatnak. Ez lehet
                         tünetmentes, de gyakran neurológiai kieséi tüneteket okoz</p>
+                    <div class="w3-center">
+                        <img id="carotis_image" class="modal_image" src="/images/carotis.png" alt="Carotis"
+                             style="width: 30%;height: 30%">
+                        <div id="carotis_modal" class="modal">
+                            <span id="carotis_close" class="close">&times;</span>
+                            <img class="modal-content" id="carotis_modal_image" style="width: 80%;height: 80%"/>
+                            <div id="carotis_caption"></div>
+                        </div>
+                        <p><a href="https://evtoday.com/search?q=timothy+m.+sullivan" target="_blank">By Timothy M.
+                            Sullivan</a></p>
+                    </div>
                 </li>
                 <li>
-                    <h5>Tünetek</h5>
+                    <h5><strong>Tünetek</strong></h5>
                     <p>Ellenoldali testfélgyengeség vagy bénulás, látótérkiesés.
                         Lehet átmeneti vagy maradandó</p>
                 </li>
                 <li>
-                    <h5>Vizsgálatok</h5>
+                    <h5><strong>Vizsgálatok</strong></h5>
                     <p>Első vizsgálat a nyaki ér UH, mely a szűkület mértékét
                         tudja meghatározni. Ha ez jelentős, a 7o%-ot meghaladja, CTA vagy MRA
                         szükséges, mely a nyaki éren a plakk pontos szerkezetét, kiterjedését, a
@@ -31,7 +42,7 @@
                         igazolja</p>
                 </li>
                 <li>
-                    <h5>Kezelési lehetőségek</h5>
+                    <h5><strong>Kezelési lehetőségek</strong></h5>
                     <p>70%-nál kisebb igazolt szűkület esetén
                         preventív gyógyszeres kezelés szükséges, így 1x100mg Aspirin protect és
                         bármely statin (még normál cholesterin szint mellett is), valamint a
@@ -43,7 +54,7 @@
                         súlyossága, hanem a nyaki ér szűkületének mértéke befolyásolja elsődlegesen</p>
                 </li>
                 <li>
-                    <h5>Műtéti típusok</h5>
+                    <h5><strong>Műtéti típusok</strong></h5>
                     <p>Nemzetközi ajánlások szerint elsődleges a nyitott
                         műtét, mely altatásban történik, a nyaki ér megnyitása után a kóros plakkot
                         eltávolítjuk. A seb jól gyógyul, sebfájdalom nem gyakori, általában a beteg
@@ -54,7 +65,7 @@
                         nincs</p>
                 </li>
                 <li>
-                    <h5>Utókezelés, követés</h5>
+                    <h5><strong>Utókezelés, követés</strong></h5>
                     <p>A műtét után a gyógyszeres kezelés folytatása
                         és a rizikótényezők kezelése továbbra is indokolt, valamint fél évente reguláris
                         UH kontroll az erek állapotának megítélésére. Terhelés, munkavégzés
@@ -62,12 +73,38 @@
                 </li>
 
                 <li class="w3-container">
-                    <h5>Hivatkozások</h5>
-                    <a href="http://vszek.semmelweis.hu/nyaki-veroer-szukulet#" target="_blank">Nyaki verőér
-                        szűkület</a><br>
-                    <a href="https://www.youtube.com/watch?v=fGw0oBmmuHM" target="_blank">Carotid Endarterectomy</a>
+                    <h5><strong>Hivatkozások</strong></h5>
+                    <div class="row">
+                        <a href="http://vszek.semmelweis.hu/nyaki-veroer-szukulet#" target="_blank">
+                            <div id="red00" class="col-sm-6 w3-center">
+                                <div class="w3-section w3-card-4 w3-padding-small" style="width: 300px;height: 120px">
+                                    <div>
+                                        <img src="/images/semmelweis_logo.png" width="30%" height="30%"/>
+                                    </div>
+                                    <div>
+                                        <a href="http://vszek.semmelweis.hu/nyaki-veroer-szukulet#"
+                                           target="_blank"><strong>Nyaki verőér
+                                            szűkület</strong></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=fGw0oBmmuHM" target="_blank">
+                            <div id="ref11" class="col-sm-6 w3-center ">
+                                <div class="w3-section w3-card-4 w3-padding-small" style="width: 300px;height: 120px">
+                                    <div class="w3-padding">
+                                        <img src="/images/youtube_icon.png" width="35%" height="35%"/>
+                                    </div>
+                                    <div class="w3-padding">
+                                        <a href="https://www.youtube.com/watch?v=fGw0oBmmuHM" target="_blank"><strong>Carotid
+                                            Endarterectomy</strong></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </li>
-
             </ul>
         </div>
 
@@ -77,7 +114,7 @@
             <h4>Alsó végtagi érszűkület</h4>
             <ul class="w3-ul">
                 <li>
-                    <h5>Kórkép</h5>
+                    <h5><strong>Kórkép</strong></h5>
                     <p>Az alsó végtagi erekben az érelmeszesedés miatt szűkületek,
                         az idő múlásával elzáródások alakulnak ki. Ennek következtében a végtag
                         keringése romlik. Ez eleinte járási panasz formájában jelentkezik, majd
@@ -85,7 +122,7 @@
                         amputációja lehet szükséges</p>
                 </li>
                 <li>
-                    <h5>Tünetek</h5>
+                    <h5><strong>Tünetek</strong></h5>
                     <p>A leggyakoribb tünete a terhelésre, járásra jelentkező
                         izomfájdalom, pl. vádligörcs, mely pihenésre szűnik (kirakatbetegség), A
                         járástávolság idővel fokozatosan csökken. Ha a vérellátási zavar tartós, a
@@ -97,7 +134,7 @@
                         kezelést igényel</p>
                 </li>
                 <li>
-                    <h5>Vizsgálatok</h5>
+                    <h5><strong>Vizsgálatok</strong></h5>
                     <p>A beteg kikérdezés, a panaszok jellege az első fontos
                         információ. A láb bokatáji ereinek tapinthatósága a következő lépés – ha ez
                         már hiányos, kézi dopplerrel vizsgálható a vérkeringés mértékének csökkenése
@@ -106,7 +143,7 @@
                         szakaszának vizsgálatára inkább katéteres érvizsgálat.)</p>
                 </li>
                 <li>
-                    <h5>Kezelési lehetőségek</h5>
+                    <h5><strong>Kezelési lehetőségek</strong></h5>
                     <p>Korai esetben, megtartott járásképesség
                         mellett prevenciós kezelésként Aspirin protect és statin javasolt, valamint a
                         keringés javítására tablettás gyógyszerek (cilostazol, sulodexid), súlyosabb
@@ -117,7 +154,7 @@
                         megtartása, a jobb járásképesség elérése</p>
                 </li>
                 <li>
-                    <h5>Műtéti típusok</h5>
+                    <h5><strong>Műtéti típusok</strong></h5>
                     <p>Ha érfestés szerint rövid szakaszú az érelzáródás,
                         vagy a beteg általános teherbírása alacsonyabb, elsődleges az endovascularis
                         beavatkozás azaz katéteres értágítás, ha kell, stent beültetéssel. Ez kevéssé
@@ -137,7 +174,7 @@
                         műtét eredménye, tartóssága</p>
                 </li>
                 <li>
-                    <h5>Utókezelés, követés:</h5>
+                    <h5><strong>Utókezelés, követés:</strong></h5>
                     <p>A műtét után a gyógyszeres kezelés folytatása
                         és a rizikótényezők kezelése továbbra is indokolt, valamint fél évente reguláris
                         érsebészeti kontroll az erek állapotának megítélésére. Terhelés, munkavégzés
@@ -148,9 +185,23 @@
                         érszűkületes betegség esetén</p>
                 </li>
                 <li class="w3-container">
-                    <h5>Hivatkozások</h5>
-                    <a href=" http://vszek.semmelweis.hu/also-vegtagi-erszukulet" target="_blank">Alsó végtagi
-                        szűkület</a>
+                    <h5><strong>Hivatkozások</strong></h5>
+                    <div class="row">
+                        <a href="http://vszek.semmelweis.hu/also-vegtagi-erszukulet#" target="_blank">
+                            <div id="red01" class="col-sm-12 w3-center">
+                                <div class="w3-section w3-card-4 w3-padding-small" style="width: 300px;height: 120px">
+                                    <div>
+                                        <img src="/images/semmelweis_logo.png" width="30%" height="30%"/>
+                                    </div>
+                                    <div>
+                                        <a href="http://vszek.semmelweis.hu/also-vegtagi-erszukulet#"
+                                           target="_blank"><strong>Alsó végtagi
+                                            szűkület</strong></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -161,7 +212,7 @@
             <h4>Értágulatok, aneurysmák</h4>
             <ul class="w3-ul">
                 <li>
-                    <h5>Kórkép</h5>
+                    <h5><strong>Kórkép</strong></h5>
                     <p>Érfalgyengeség veleszületett hajlam vagy szerzett
                         érbetegség (gyulladásos kórkép, atherosclerosis) miatt bármely verőéren
                         kialakulhat. Veszélye a <strong>mellkasi (thoracalis aorta aneurysma, THAA), hasi
@@ -172,19 +223,19 @@
                         vérhiányos állalapot, végső esetben amputációs kockázat áll fenn.</p>
                 </li>
                 <li>
-                    <h5>Tünetek</h5>
+                    <h5><strong>Tünetek</strong></h5>
                     <p>A kórkép kifejezetten tünetmentes, felismerése gyakran
                         véletlenszerű vagy más miatt végzett UH, CT vizsgálat során, vagy a kóros
                         tapintási lelet kapcsán derül ki. Rosszabb esetben a vérzéses tünetek vagy akut
                         verőér-elzáródás miatt válik szükségessé az azonnali érsebészeti ellátás</p>
                 </li>
                 <li>
-                    <h5>Vizsgálatok</h5>
+                    <h5><strong>Vizsgálatok</strong></h5>
                     <p>Hasi és perifériás ereken UH vizsgálattal is igazolható,
                         de a pontos kiterjedést csak CT vagy MR mutatja meg</p>
                 </li>
                 <li>
-                    <h5>Kezelési lehetőségek</h5>
+                    <h5><strong>Kezelési lehetőségek</strong></h5>
                     <p>Ha a tágulat mérete még mérsékelt, annak
                         követése, reguláris UH vagy CT kontrollja javasolt, valamint a rizikófaktorok
                         csökkentése, és a vérnyomása beállítása – cél a magas értékek, kiugrások
@@ -196,7 +247,7 @@
                         érelzáródás megelőzése.</p>
                 </li>
                 <li>
-                    <h5>Műtéti típusok</h5>
+                    <h5><strong>Műtéti típusok</strong></h5>
                     <p>A kezelés módját többek közt a tágulat helye,
                         kiterjedése, a beteg általános állapota befolyásolja. Végezhető:<br>
                         - Nyitott műtét, a tágult szakasz műérrel pótlásával, szinte minden
@@ -222,9 +273,19 @@
                         stentgrafttal. Ez több órás, megterhelő nehéz műtétek. A
                         Városmajorban az Érsebészeti Tanszéken gyakran olyan eseteket
                         is felvállalunk, melyet az ország más központja már nem lát el.</p>
+
+                    <div class="w3-center w3-margin">
+                        <img id="stentgraf_image" class="modal_image" src="/images/stentgraft.jpg" alt="Stentgraf műtő"
+                             style="width: 40%;height: 40%">
+                        <div id="stentgraf_modal" class="modal">
+                            <span id="stentgraf_close" class="close">&times;</span>
+                            <img class="modal-content" id="stentgraf_modal_image" style="width: 80%;height: 80%"/>
+                            <div id="stentgraf_caption"></div>
+                        </div>
+                    </div>
                 </li>
                 <li>
-                    <h5>Utókezelés, követés:</h5>
+                    <h5><strong>Utókezelés, követés:</strong></h5>
                     <p>A műtét után a gyógyszeres kezelés folytatása
                         és a rizikótényezők kezelése továbbra is indokolt. Fél évente reguláris
                         érsebészeti kontroll javasolt az erek állapotának megítélésére: nyitott műtét
@@ -251,20 +312,28 @@
         <ul class="w3-ul">
             <li>
                 <h5>Kórkép</h5>
-                <p>A lábakon a vérellátást az artériás rendszer biztosítja, a vért
-                    visszafelé a vénák szállítják. Ez többségében az álló testhelyzet miatt lentről
-                    felfelé történik, a működéshez a visszafolyást gátló ép vénás billentyűzet
-                    szükséges. Ha a véna túltágul, a billentyű nem zár, a vér nem ürül ki teljesen,
-                    pang. A hosszú ereken a véroszlop nyomása a bokánál okoz tüneteket: először
-                    barna pigmentáció, majd egybefolyó bőrelszíneződés jelentkezik a beivódó
-                    pigmentek miatt, ez károsítja a bőr keringését, oxigenizációját, évek során
-                    fekély alakul ki. A fő vénatörzs pangása a bele vezető oldalágak elfolyását is
-                    rontja, így azok keringése is lassul, a vér pang, feszíti az oldalági vénák falát,
-                    azok kitágulnak, kanyargósak lesznek – kialakul a látható visszeresség. Ettől
-                    független kórkép a lábon kialakuló felületes pókhálóvénák esete, melynek
-                    keringési jelentősége nincs, „csak” esztétikai problémát okoznak. További
-                    vénás betegség a mélyvénás trombózis, melynek nincs érsebészeti vonzata,
-                    belgyógyászati kezelést és gondozást igényel</p>
+                <div class="row">
+                    <div class="col-sm-8 w3-center float-right">
+                        <p>A lábakon a vérellátást az artériás rendszer biztosítja, a vért
+                            visszafelé a vénák szállítják. Ez többségében az álló testhelyzet miatt lentről
+                            felfelé történik, a működéshez a visszafolyást gátló ép vénás billentyűzet
+                            szükséges. Ha a véna túltágul, a billentyű nem zár, a vér nem ürül ki teljesen,
+                            pang. A hosszú ereken a véroszlop nyomása a bokánál okoz tüneteket: először
+                            barna pigmentáció, majd egybefolyó bőrelszíneződés jelentkezik a beivódó
+                            pigmentek miatt, ez károsítja a bőr keringését, oxigenizációját, évek során
+                            fekély alakul ki. A fő vénatörzs pangása a bele vezető oldalágak elfolyását is
+                            rontja, így azok keringése is lassul, a vér pang, feszíti az oldalági vénák falát,
+                            azok kitágulnak, kanyargósak lesznek – kialakul a látható visszeresség. Ettől
+                            független kórkép a lábon kialakuló felületes pókhálóvénák esete, melynek
+                            keringési jelentősége nincs, „csak” esztétikai problémát okoznak. További
+                            vénás betegség a mélyvénás trombózis, melynek nincs érsebészeti vonzata,
+                            belgyógyászati kezelést és gondozást igényel</p>
+                    </div>
+                    <div class="col-sm-4 w3-center">
+                        <img src="/images/origin_varicose_vein.jpg" class="img-fluid float-left"
+                             alt="Hagyományos visszér"/>
+                    </div>
+                </div>
             </li>
             <li>
                 <h5>Tünetek</h5>
@@ -383,3 +452,29 @@
         </ul>
     </div>
 </div>
+
+<script>
+
+    function make_modal_image(modalId, imageId, modalImageId, captionTextId, closeId) {
+        var modal = document.getElementById(modalId);
+
+        var img = document.getElementById(imageId);
+        var modalImg = document.getElementById(modalImageId);
+        var captionText = document.getElementById(captionTextId);
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        };
+
+        var span = document.getElementById(closeId);
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    }
+
+    make_modal_image("carotis_modal", "carotis_image", "carotis_modal_image", "carotis_caption", "carotis_close");
+    make_modal_image("stentgraf_modal", "stentgraf_image", "stentgraf_modal_image", "stentgraf_caption", "stentgraf_close")
+
+</script>
