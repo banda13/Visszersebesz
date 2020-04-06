@@ -51,7 +51,7 @@ $first_part = $components[1];
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container d-flex align-items-center">
+        <div class="container d-flex align-items-center" style="padding-right: 1px; padding-left: 1px">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
@@ -64,7 +64,9 @@ $first_part = $components[1];
                     <li class="nav-item <?php if ($first_part == "pricing.php") echo "active";?>" onclick="toggleActivity("about")"><a href="/pricing.php" class="nav-link">Árak</a></li>
                     <li class="nav-item <?php if ($first_part == "blog.php") echo "active";?>" onclick="toggleActivity("about")"><a href="/blog.php" class="nav-link">Blog</a></li>
                     <li class="nav-item <?php if ($first_part == "kerdesek.php") echo "active";?>" onclick="toggleActivity("about")"><a href="/kerdesek.php" class="nav-link">Orvos válaszol</a></li>
-                    <li class="nav-item <?php if ($first_part == "contact.php") echo "active";?>" onclick="toggleActivity("about")"><a href="/contact.php" class="nav-link">Munkahelyek/Elérhetőségek</a></li>
+                    <li class="nav-item <?php if ($first_part == "contact.php") echo "active";?>" onclick="toggleActivity("about")"><a href="/contact.php" class="nav-link">Elérhetőségek</a></li>
+                    <li class="nav-item <?php if ($first_part == "contact.php") echo "active";?>" onclick="toggleActivity("about")"><a href="/hivatkozasok.php" class="nav-link">Hivatkozások</a></li>
+                    <li class="nav-item"> <a  class="nav-link"> <span class="icon-search"></span> </li>
                 </ul>
             </div>
         </div>
