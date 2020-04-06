@@ -1,0 +1,16 @@
+{
+  "name_mappings": {
+    "blog.php": "BLOG",
+    "contact.php": "MUNKAHELYEK, ELÉRHETŐSÉG",
+    "index.php": "KÖSZÖNTŐ",
+    "introduction.php": "BEMUTATKOZÁS",
+    "knowledge.php": "ÉRBETEGSÉGEK – ALAPISMERETEK ÉS MŰTÉTEK",
+    "prices.php": "ÁRAK",
+    "questions.php": "ORVOS VÁLASZOL",
+    "references.php": "HIVATKOZÁSOK"
+  },
+  "url_mappings": {
+    "welcome.php": "index.php"
+  },
+  "test": "test"
+}
