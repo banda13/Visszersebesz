@@ -1,4 +1,5 @@
-<?php echo file_get_contents("html/header.html"); ?>
+<?php include("header.php") ?>
+
 
 <?php
 if (isset($_GET['post'])) {
@@ -8,7 +9,5 @@ if (isset($_GET['post'])) {
 }
 
 ?>
-
-<?php echo file_get_contents("html/footer.html"); ?>
 
 
