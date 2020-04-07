@@ -9,7 +9,7 @@
 <script>
 
     $(document).ready(function () {
-        $("#corona_modal_container").load("html/corona_modal.html", function () {
+        $("#corona_modal_container").load("html/modals/corona_modal.html", function () {
             $('#corona_modal_div').modal('show');
         });
     });

@@ -1,0 +1,1 @@
+{"Messages":[{"Status":"success","CustomID":"","To":[{"Email":"szabag@gmail.com","MessageUUID":"c9a842cf-6363-4161-9d15-040f59d1b322","MessageID":576460755504447890,"MessageHref":"https:\/\/api.mailjet.com\/v3\/REST\/message\/576460755504447890"}],"Cc":[],"Bcc":[]}]}

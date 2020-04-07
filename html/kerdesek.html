@@ -3,13 +3,16 @@
 
 <body>
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('/images/valaszol3.jpg');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/images/valaszol3.jpg');"
+         data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 text-center">
                 <h1 class="mb-2 bread" style="color: black">Orvos válaszol</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.php" style="color: black">Kezdőlap <i class="ion-ios-arrow-forward"></i></a></span> <span style="color: black">Orvos válaszol <i class="ion-ios-arrow-forward"></i></span></p>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.php" style="color: black">Kezdőlap <i
+                        class="ion-ios-arrow-forward"></i></a></span> <span style="color: black">Orvos válaszol <i
+                        class="ion-ios-arrow-forward"></i></span></p>
             </div>
         </div>
     </div>
@@ -24,71 +27,144 @@
                 <hr>
                 <form id="contact-form" action="/api/send_mail.php" method="post" role="form">
 
-                <div class="messages"></div>
+                    <div class="messages"></div>
 
-                <div class="controls">
+                    <div class="controls">
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="form_name">Vezetéknév *</label>
-                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Kérem adja meg a vezetéknevét *" required="required" data-error="A vezetéknév megadása kötelező.">
-                                <div class="help-block with-errors"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Vezetéknév *</label>
+                                    <input id="form_name" type="text" name="name" class="form-control"
+                                           placeholder="Kérem adja meg a vezetéknevét *" required="required"
+                                           data-error="A vezetéknév megadása kötelező.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Keresztnév *</label>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control"
+                                           placeholder="Kérem adja meg a teljes keresztnevét *" required="required"
+                                           data-error="A keresztnév megadása kötelező.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="form_lastname">Keresztnév *</label>
-                                <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Kérem adja meg a teljes keresztnevét *" required="required" data-error="A keresztnév megadása kötelező.">
-                                <div class="help-block with-errors"></div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Email *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control"
+                                           placeholder="Kérem adja meg az email címét *" required="required"
+                                           data-error="Érvényes email cím megadása kötelező.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_need">Kérem válasszon témát *</label>
+                                    <select id="form_need" name="need" class="form-control" required="required"
+                                            data-error="Téma választása kötelező *">
+                                        <option value=""></option>
+                                        <option value="Request general question">Általános kérdés</option>
+                                        <option value="Request time">Időpont egyeztetés</option>
+                                        <option value="Request corona virus">Korona vírus</option>
+                                        <option value="Other">Egyéb</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Üzenet *</label>
+                                    <textarea id="form_message" name="message" class="form-control" rows="4"
+                                              required="required" data-error="Kérem írjon üzenetet."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input id="send_button" type="submit" class="btn btn-success btn-send" value="Üzenet elküldése"
+                                       name="formSubmit">
+                                <div id="loading_spinner" class="spinner-border text-primary" role="status" style="display: none;">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="text-muted">
+                                    <strong>*</strong> Ezen mezők kitöltése kötelező.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="form_email">Email *</label>
-                                <input id="form_email" type="email" name="email" class="form-control" placeholder="Kérem adja meg az email címét *" required="required" data-error="Érvényes email cím megadása kötelező.">
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="form_need">Kérem válasszon témát *</label>
-                                <select id="form_need" name="need" class="form-control" required="required" data-error="Téma választása kötelező *">
-                                    <option value=""></option>
-                                    <option value="Request general question">Általános kérdés</option>
-                                    <option value="Request time">Időpont egyeztetés</option>
-                                    <option value="Request corona virus">Korona vírus</option>
-                                    <option value="Other">Egyéb</option>
-                                </select>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="form-group">
-                                <label for="form_message">Üzenet *</label>
-                                <textarea id="form_message" name="message" class="form-control" rows="4" required="required" data-error="Kérem írjon üzenetet."></textarea>
-                                <div class="help-block with-errors"></div>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <input type="submit" class="btn btn-success btn-send" value="Üzenet elküldése" name="formSubmit">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <p class="text-muted">
-                                <strong>*</strong> Ezen mezők kitöltése kötelező.</p>
-                        </div>
-                    </div>
-                </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    function startSpinningButton(id, spinner){
+        $("#" + id).prop('disabled', true);
+        $("#" + spinner).show();
+    }
+
+    function stopSpinningButton(id, spinner){
+        $("#" + id).prop('disabled', false);
+        $("#" + spinner).hide();
+    }
+
+    $("#contact-form").submit(function (event) {
+
+        /* stop form from submitting normally */
+        event.preventDefault();
+
+        startSpinningButton("", "loading_spinner");
+
+        /* get the action attribute from the <form action=""> element */
+        var $form = $(this),
+            url = $form.attr('action');
+
+        /* Send the data using post with element id name and name2*/
+        var posting = $.post(url,
+            {
+                name: $('#form_name').val(),
+                surname: $('#form_lastname').val(),
+                email: $('#form_email').val(),
+                need: $('#form_need').val(),
+                message: $('#form_message').val(),
+            });
+
+        posting.done(function (data) {
+            console.log(data);
+            console.log(typeof(data));
+            if(data['Messages'][0]["Status"] === "success"){
+                document.getElementById("email_response_container").innerHTML = "";
+                $("#email_response_container").load("html/modals/email_success.html", function () {
+                        $('#email_response_modal').modal('show');
+                        console.log("Sending email succeed");
+                });
+            }
+            else{
+                document.getElementById("email_response_container").innerHTML = "";
+                $("#email_response_container").load("html/modals/email_error.html", function () {
+                    $('#email_response_modal').modal('show');
+                    console.log("Sending email failed");
+                });
+                // todo extra log & notification to us!
+            }
+
+            stopSpinningButton("send_button", "loading_spinner");
+            $("#contact-form")[0].reset();
+        });
+    });
+
+</script>
 </body>
+
+<div id="email_response_container"></div>
+
 </html>
