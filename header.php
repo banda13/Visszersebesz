@@ -35,6 +35,9 @@ $first_part = $components[1];
     <link rel="stylesheet" href="../css/style.css">
 
 
+
+    <script src="/js/jquery.min.js"></script>
+
     <div class="py-md-5 py-4 border-bottom">
         <div class="container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
