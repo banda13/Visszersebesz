@@ -10,7 +10,7 @@
 
     $(document).ready(function () {
         $("#corona_modal_container").load("html/corona_modal.html", function () {
-            document.getElementById('corona_modal_div').style.display = 'block';
+            $('#corona_modal_div').modal('show');
         });
     });
 
