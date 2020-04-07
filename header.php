@@ -42,11 +42,12 @@ $first_part = $components[1];
         <div class="container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
                 <div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
-                    <a class="navbar-brand" href="/index.php">Visszérsebész<span>érsebész</span></a>
+                    <a class="navbar-brand" href="/index.php">Érsebész<span>érsebész</span></a>
                 </div>
             </div>
         </div>
     </div>
+
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class=" d-flex align-items-center" style="padding-right: 1px; padding-left: 1px"> <!-- container-->
@@ -103,6 +104,8 @@ $first_part = $components[1];
             </div>
         </div>
     </nav>
+
+
 </header>
 </html>
 

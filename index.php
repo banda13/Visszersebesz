@@ -6,7 +6,8 @@
 
 <div id="corona_modal_container"></div>
 
-<script>
+
+    <script>
 
     $(document).ready(function () {
         $("#corona_modal_container").load("html/modals/corona_modal.html", function () {
