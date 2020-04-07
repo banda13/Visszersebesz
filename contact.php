@@ -1,5 +1,5 @@
 <?php include("header.php") ?>
-
+<link rel="stylesheet" href="/css/google_maps.css">
 
 <?php echo file_get_contents("html/contact.html"); ?>
 
@@ -10,24 +10,24 @@
         function loadGoogleMaps() {
             const script_tag = document.createElement('script');
             script_tag.setAttribute("type", "text/javascript");
-            //script_tag.setAttribute("src", "https://maps.googleapis.com/maps/api/js?key=AIzaSyDcc8SjY5XX-5wSrnHD2AgGSPOXyhnbxPQ&callback=initMap");
-            //TODO add some (more) security!
-            $.get("/api/read_api_keys.php?key=google_map",
-                /*mapKey = mapKey.replace(new RegExp('"', 'g'), '');
-                script_tag.setAttribute("src", "https://maps.googleapis.com/maps/api/js?key=AIzaSyDcc8SjY5XX-5wSrnHD2AgGSPOXyhnbxPQ&callback=initMap");
-                (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);*/
-                script_tag.getElementsByTagName("head")[0]|| document.documentElement).appendChild(script_tag)
-            );
+
+            $.get("/api/read_api_keys.php?key=google_map", function (mapKey) {
+                mapKey = mapKey.replace(new RegExp('"', 'g'), '');
+                script_tag.setAttribute("src", "https://maps.googleapis.com/maps/api/js?key=" + mapKey + "&callback=gMapsCallback");
+                (document.getElementsByTagName("head")[0] || document.documentElement).appendChild(script_tag);
+                console.log("Google maps api script loaded");
+            });
         }
 
         let sote_map, buda_map, vpmed_map;
 
         function initMap() {
 
+            console.log("Initializing maps");
             // The location of Uluru
-            var sote_uluru = {lat: 47.507243, lng: 19.0119703};
-            var buda_uluru = {lat: 47.4959378, lng: 19.0201113};
-            var vpmed_uluru = {lat: 47.560795, lng: 19.0839353};
+            const sote_uluru = {lat: 47.507243, lng: 19.0119703};
+            const buda_uluru = {lat: 47.4959378, lng: 19.0201113};
+            const vpmed_uluru = {lat: 47.560795, lng: 19.0839353};
 
             sote_map = new google.maps.Map(document.getElementById('map_sote'), {zoom: 17, center: sote_uluru});
             buda_map = new google.maps.Map(document.getElementById('map_buda'), {zoom: 17, center: buda_uluru});
