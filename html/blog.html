@@ -16,39 +16,9 @@
   </section>
 </div>
 
+<script src="/js/blog.js"></script>
 <script>
   $(document).ready(function () {
-    $.get("/api/blog/read_posts_name.php", function (posts_name) {
-      console.log(posts_name);
-      let arr = JSON.parse(posts_name);
-
-      for (let i = 0; i < arr.length; i++) {
-        let name = arr[i];
-        let id = name.replace(".html", "");
-
-        let row_id = Math.floor(i / 3);
-        if(i % 3 === 0){
-          console.log("Append new row");
-          $("#blog_container").append("<div id='row_" + row_id + "' class='row'></div>");
-          $("#row_" + row_id).append("<div id='" + id + "' style='display: None' class='col-md-4'></div>");
-        }
-        else if(i % 3 === 1){
-          $("#row_" + row_id).append("<div id='" + id + "' style='display: None' class='col-md-4'></div>");
-        }
-        else{
-          $("#row_" + row_id).append("<div id='" + id + "' style='display: None' class='col-md-4'></div>");
-        }
-
-
-        $("#" + id).load("blog/posts/" + name, function () {
-          $("#" + id).fadeIn("slow");
-          $("#read_" + id).on("click", function () {
-            window.location.href = '/blog.php?post=' + name.replace(".html", "");
-          });
-
-          $("#link_" + id).attr("href", '/blog.php?post=' + name.replace(".html", ""));
-        });
-      }
-    });
+    read_all_post("blog_container");
   });
 </script>
