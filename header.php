@@ -95,7 +95,7 @@ $first_part = $components[1];
 
                     <form class="form-inline navbar-form navbar-right my-2 my-lg-0" action="/search.php" method="get">
                         <div class="form-group-sm">
-                            <input class="form-control mr-sm-2 input-sm" type="search" placeholder="Keresés" aria-label="Search">
+                            <input class="form-control mr-sm-2 input-sm" name="search" type="search" placeholder="Keresés" aria-label="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="ion-md-search"></i></button>
                         </div>
                     </form>
