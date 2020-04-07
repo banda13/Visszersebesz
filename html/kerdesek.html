@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +22,7 @@
                 <h2 class="w3-center">ORVOS VÁLASZOL</h2>
 
                 <hr>
-                <form id="contact-form" method="post" action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>"" role="form">
+                <form id="contact-form" action="/api/send_mail.php" method="post" role="form">
 
                 <div class="messages"></div>
 
@@ -33,7 +32,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="form_name">Vezetéknév *</label>
-                                <input id="form_name" type="text" name="neve" class="form-control" placeholder="Kérem adja meg a vezetéknevét *" required="required" data-error="A vezetéknév megadása kötelező.">
+                                <input id="form_name" type="text" name="name" class="form-control" placeholder="Kérem adja meg a vezetéknevét *" required="required" data-error="A vezetéknév megadása kötelező.">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -71,7 +70,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="form_message">Üzenet *</label>
-                                <textarea id="form_message" name="uzenet" class="form-control" rows="4" required="required" data-error="Kérem írjon üzenetet."></textarea>
+                                <textarea id="form_message" name="message" class="form-control" rows="4" required="required" data-error="Kérem írjon üzenetet."></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -86,7 +85,6 @@
                         </div>
                     </div>
                 </div>
-
                 </form>
             </div>
         </div>
