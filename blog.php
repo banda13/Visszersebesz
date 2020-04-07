@@ -11,3 +11,4 @@ if (isset($_GET['post'])) {
 ?>
 
 
+<?php include("footer.php") ?>

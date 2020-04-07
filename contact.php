@@ -3,7 +3,7 @@
 
 <?php echo file_get_contents("html/contact.html"); ?>
 
-
+<?php include("footer.php") ?>
 
 <script>
     $(document).ready(function () {
