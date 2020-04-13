@@ -9913,3 +9913,7 @@ readmore:hover:after {
 #scrollTopButton:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
+
+.container.medium-container {
+  padding: 0 10px;
+}
