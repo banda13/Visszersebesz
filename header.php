@@ -50,10 +50,10 @@ $first_part = $components[1];
                     } else {
                         echo "noactive";
                     } ?>" onclick="toggleActivity("index")"><a href="/index.php" class="nav-link pl-0">Kezdőlap</a></li>
-                    <li class="nav-item <?php if ($first_part == "about.php") echo "active"; ?>"><a href="/about.php"
+                    <li class="nav-item <?php if ($first_part == "bemutatkozas.php") echo "active"; ?>"><a href="/bemutatkozas.php"
                                                                                                     class="nav-link">Bemutatkozás</a>
                     </li>
-                    <li class="nav-item dropdown <?php if ($first_part == "department.php") echo "active"; ?>">
+                    <li class="nav-item dropdown <?php if ($first_part == "erbetegsegek.php") echo "active"; ?>">
                         <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Érbetegségek
                         </a>
@@ -67,19 +67,19 @@ $first_part = $components[1];
                     </li>
 
 
-                    <li class="nav-item <?php if ($first_part == "pricing.php") echo "active"; ?>"><a
-                                href="/pricing.php" class="nav-link">Árak</a></li>
+                    <li class="nav-item <?php if ($first_part == "arak.php") echo "active"; ?>"><a
+                                href="/arak.php" class="nav-link">Árak</a></li>
                     <li class="nav-item <?php if ($first_part == "blog.php") echo "active"; ?>"><a href="/blog.php"
                                                                                                    class="nav-link">Blog</a>
                     </li>
                     <li class="nav-item <?php if ($first_part == "kerdesek.php") echo "active"; ?>"><a
                                 href="/kerdesek.php" class="nav-link">Orvos válaszol</a></li>
-                    <li class="nav-item <?php if ($first_part == "contact.php") echo "active"; ?>"><a
-                                href="/contact.php" class="nav-link">Elérhetőségek</a></li>
+                    <li class="nav-item <?php if ($first_part == "elerhetoseg.php") echo "active"; ?>"><a
+                                href="/elerhetoseg.php" class="nav-link">Elérhetőségek</a></li>
                     <li class="nav-item <?php if ($first_part == "hivatkozasok.php") echo "active"; ?>"><a
                                 href="/hivatkozasok.php" class="nav-link">Hivatkozások</a></li>
 
-                    <form class="form-inline navbar-form navbar-right my-2 my-lg-0" action="/search.php" method="get">
+                    <form class="form-inline navbar-form navbar-right my-2 my-lg-0" action="/kereses.php" method="get">
                         <div class="form-group-sm">
                             <input class="form-control mr-sm-2 input-sm" name="search" type="search" placeholder="Keresés" aria-label="Search">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="icon-search"></i></button>
@@ -95,7 +95,7 @@ $first_part = $components[1];
 <script>
     $(document).ready(function () {
         $("#navbardrop").click(function () {
-            window.location.href = '/department.php';
+            window.location.href = '/erbetegsegek.php';
         })
     });
 </script>

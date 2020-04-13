@@ -1,7 +1,7 @@
 <?php include("header.php") ?>
 <link rel="stylesheet" href="/css/google_maps.css">
 
-<?php echo file_get_contents("html/contact.html"); ?>
+<?php echo file_get_contents("html/elerhetoseg.html"); ?>
 
 <?php include("footer.php") ?>
 
