@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<footer class="ftco-footer ftco-bg-dark ftco-section">
+<footer class="ftco-footer ftco-bg-dark">
     <div class="container">
         <div class="row mb-5">
-            <div class="col-md">
+            <div class="col-md-4">
                 <div class="ftco-footer-widget mb-5">
                     <h3 class="ftco-heading-3">Kérdése van?</h3>
                     <div class="block-23 mb-1">
@@ -12,57 +12,30 @@
 
                 </div>
             </div>
-            <div class="col-md">
+            <div class="col-md-4">
                 <div class="ftco-footer-widget mb-5 ml-md-4">
                     <h3 class="ftco-heading-3">Honlap térkép</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Kezdőlap</a></li>
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Bemutatkozás</a></li>
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Érbetegségek</a></li>
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Árak</a></li>
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Blog</a></li>
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Orvos válaszol</a></li>
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Elérhetőségek</a></li>
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Hivatkozások</a></li>
+                        <li><a href="/index.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Kezdőlap</a></li>
+                        <li><a href="/about.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Bemutatkozás</a></li>
+                        <li><a href="/department.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Érbetegségek</a></li>
+                        <li><a href="/pricing.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Árak</a></li>
+                        <li><a href="/blog.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Blog</a></li>
+                        <li><a href="/kerdesek.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Orvos válaszol</a></li>
+                        <li><a href="/contact.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Elérhetőségek</a></li>
+                        <li><a href="/hivatkozasok.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Hivatkozások</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-md">
+            <div class="col-md-4">
                 <div class="ftco-footer-widget mb-5 ml-md-4">
-                    <h2 class="ftco-heading-2">Legfontosabb szakterületek</h2>
+                    <h3 class="ftco-heading-3">Szakterületek</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Nyaki erek</a></li>
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Alsó végtagi érszűkület</a></li>
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Értágulatok, aneurysmák</a></li>
-                        <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Visszeresség</a></li>
+                        <li><a href="/nyakierek.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Nyaki erek</a></li>
+                        <li><a href="/alsovegtag.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Alsó végtagi érszűkület</a></li>
+                        <li><a href="/ertagulatok.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Értágulatok, aneurysmák</a></li>
+                        <li><a href="/visszerek.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Visszeresség</a></li>
                     </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-5">
-                    <h2 class="ftco-heading-2">Elérhetőségek</h2>
-                    <div class="block-21 mb-4 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url(../images/image_1.jpg);"></a>
-                        <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                            <div class="meta">
-                                <div><a href="#"><span class="icon-calendar"></span> Sept. 20, 2019</a></div>
-                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="block-21 mb-5 d-flex">
-                        <a class="blog-img mr-4" style="background-image: url(../images/image_2.jpg);"></a>
-                        <div class="text">
-                            <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                            <div class="meta">
-                                <div><a href="#"><span class="icon-calendar"></span> Sept. 20, 2019</a></div>
-                                <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                                <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
