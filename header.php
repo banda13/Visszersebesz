@@ -25,12 +25,14 @@ $first_part = $components[1];
     <link rel="stylesheet" href="/css/images.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
 
     <div class="py-md-5 py-4 border-bottom">
         <div class="container medium-container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
                 <div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
-                    <a class="navbar-brand" href="/index.php">Érsebész<span>érsebész</span></a>
+                    <a class="navbar-brand" href="/index.php">Dr Szabó Gábor Viktor Ph.D.<span class>Sebész, érsebész, szakorvos, egyetemi docens</span></a>
                 </div>
             </div>
         </div>
