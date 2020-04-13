@@ -15,7 +15,8 @@
     </div>
 </section>
 
-<div class="container m-5" id="search">
+<div >
+<div class="container mt-5 mb-5" id="search">
     <?php
     include 'api/utils.php';
 
@@ -55,7 +56,7 @@
         $paths = ['html/', 'blog/posts/', 'blog/posts_content/'];
 
         $routs = scandir(".");
-        $exclude_php = ["index_old.php", "keywords.php"];
+        $exclude_php = ["header.php", "footer.php"];
         $response = array();
 
 
@@ -176,5 +177,5 @@
     }
     ?>
 </div>
-
+</div>
 <?php include("footer.php") ?>
