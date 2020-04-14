@@ -8462,6 +8462,10 @@ h1, h2, h3, h4, h5,
         background: rgba(255, 255, 255, 0.4); }
         .owl-carousel.home-slider .owl-dots .owl-dot.active {
           background: #fff; }
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item{
+  -ms-touch-action: auto;
+  touch-action: auto;
+}
 
 .container {
   max-width: 1230px; }
