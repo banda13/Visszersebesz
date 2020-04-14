@@ -25,7 +25,7 @@
                 <h2 id="doctor-answers" class="w3-center">ORVOS VÁLASZOL</h2>
 
                 <hr>
-                <form id="contact-form" action="/api/send_mail.php" method="post" role="form">
+                <form id="contact-form" action="/api/send_mail2.php" method="post" role="form">
 
                     <div class="messages"></div>
 
@@ -117,6 +117,25 @@
         $("#" + spinner).hide();
     }
 
+    function email_success(){
+        document.getElementById("email_response_container").innerHTML = "";
+        $("#email_response_container").load("html/modals/email_success.html", function () {
+            $('#email_response_modal').modal('show');
+            console.log("Sending email succeed");
+        });
+    }
+
+    var last_reason = null;
+    function email_error(reason){
+        if(reason !== "timeout" || last_reason == null) {
+            last_reason = reason;
+            document.getElementById("email_response_container").innerHTML = "";
+            $("#email_response_container").load("html/modals/email_error.html", function () {
+                $('#email_response_modal').modal('show');
+            });
+        }
+    }
+
     $("#contact-form").submit(function (event) {
 
         /* stop form from submitting normally */
@@ -136,25 +155,18 @@
                 email: $('#form_email').val(),
                 need: $('#form_need').val(),
                 message: $('#form_message').val(),
-            });
+            },
+            setTimeout(email_error, 20000, "timeout")
+        );
 
         posting.done(function (data) {
             console.log(data);
-            console.log(typeof(data));
-            if(data['Messages'][0]["Status"] === "success"){
-                document.getElementById("email_response_container").innerHTML = "";
-                $("#email_response_container").load("html/modals/email_success.html", function () {
-                        $('#email_response_modal').modal('show');
-                        console.log("Sending email succeed");
-                });
+            if(data['success'] === true){
+                email_success();
             }
             else{
-                document.getElementById("email_response_container").innerHTML = "";
-                $("#email_response_container").load("html/modals/email_error.html", function () {
-                    $('#email_response_modal').modal('show');
-                    console.log("Sending email failed");
-                });
-                // todo extra log & notification to us!
+                email_error("error");
+                console.error(data['error']);
             }
 
             stopSpinningButton("send_button", "loading_spinner");

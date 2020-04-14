@@ -9,6 +9,9 @@ function read_all_post(container_id, limit = -1) {
             }
             for (let i = 0; i < limit; i++) {
                 let name = arr[i];
+                if(!name){
+                    continue;
+                }
                 let id = name.replace(".html", "");
 
                 let row_id = Math.floor(i / 3);
