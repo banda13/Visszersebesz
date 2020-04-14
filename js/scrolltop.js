@@ -1,3 +1,9 @@
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTo({top: 0, behavior: 'smooth'})
+    //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
 
 $(document).ready(function () {
     mybutton = $("#scrollTopButton");
@@ -9,11 +15,5 @@ $(document).ready(function () {
         } else {
             mybutton.css("display", "none");
         }
-    }
-
-    function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTo({top: 0, behavior: 'smooth'})
-        //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
 });
