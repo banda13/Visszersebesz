@@ -27,7 +27,6 @@ $first_part = $components[1];
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-
     <div class="py-md-5 py-4 border-bottom">
         <div class="container medium-container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
@@ -40,12 +39,12 @@ $first_part = $components[1];
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container medium-container d-flex align-items-center" style="padding: ">
+        <div class="container medium-container d-flex align-items-center">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                     aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
-            <div class="collapse navbar-collapse mr-5 ml-5 navbar-left" id="ftco-nav">
+            <div class="collapse navbar-collapse navbar-left" id="ftco-nav">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item <?php if ($first_part == "index.php") {
                         echo "active";
@@ -63,7 +62,6 @@ $first_part = $components[1];
                             <a class="dropdown-item" href="/nyakierek.php">Nyaki erek betegségei</a>
                             <a class="dropdown-item" href="/alsovegtag.php">Alsó végtagi érszűkület</a>
                             <a class="dropdown-item" href="/ertagulatok.php">Értágulatok</a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/visszerek.php">Visszeresség</a>
                         </div>
                     </li>
