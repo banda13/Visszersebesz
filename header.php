@@ -42,7 +42,7 @@ $first_part = $components[1];
         <div class="container medium-container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
                 <div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
-                    <a class="navbar-brand" href="/index.php">Dr Szabó Gábor Viktor Ph.D.<span class>Sebész, érsebész, szakorvos, egyetemi docens</span></a>
+                    <a href="/index.php"><h3>Dr Szabó Gábor Viktor Ph.D.</h3><h5>Sebész, érsebész, szakorvos, egyetemi docens</h5></a>
                 </div>
             </div>
         </div>
