@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12 text-center" data-toggle="tooltip" data-placement="top" title="Created by Endy and Fjuzi">
                 <p>Dr. Szabó Gábor Viktor Ph.D Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </p>
             </div>
         </div>
