@@ -8906,6 +8906,13 @@ textarea.form-control {
   padding: 0em 0;
   position: relative; }
 
+.ftco-section-forpricing {
+  position: relative;
+  padding-bottom: 7em;
+  padding-left: 7em;
+  padding-right: 7em;
+}
+
 
 .ftco-no-pt {
   padding-top: 0; }
@@ -9902,7 +9909,7 @@ readmore:hover:after {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: #46b7de; /* Set a background color */
+  background-color: #a8c337; /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
@@ -9918,4 +9925,12 @@ readmore:hover:after {
   .container{
     max-width: 1600px;
   }
+}
+
+.iconGrowing-onHover{
+  transition: all .2s ease-in-out;
+}
+
+.iconGrowing-onHover:hover{
+  transform: scale(1.1);
 }
