@@ -25,9 +25,9 @@
 
             console.log("Initializing maps");
             // The location of Uluru
-            const sote_uluru = {lat: 47.507243, lng: 19.0119703};
-            const buda_uluru = {lat: 47.4959378, lng: 19.0201113};
-            const vpmed_uluru = {lat: 47.560795, lng: 19.0839353};
+            const sote_uluru = {lat: 47.5068561, lng: 19.0103712};
+            const buda_uluru = {lat: 47.4955715, lng: 19.0199645};
+            const vpmed_uluru = {lat: 47.5607986, lng: 19.0839353};
 
             sote_map = new google.maps.Map(document.getElementById('map_sote'), {zoom: 17, center: sote_uluru});
             buda_map = new google.maps.Map(document.getElementById('map_buda'), {zoom: 17, center: buda_uluru});

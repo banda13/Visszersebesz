@@ -28,7 +28,11 @@ $first_part = $components[1];
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163570933-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-163570933-1');
@@ -42,7 +46,8 @@ $first_part = $components[1];
         <div class="container medium-container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
                 <div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
-                    <a href="/index.php"><h3>Dr Szabó Gábor Viktor Ph.D.</h3><h5>Sebész, érsebész, szakorvos, egyetemi docens</h5></a>
+                    <a href="/index.php"><h3>Dr Szabó Gábor Viktor Ph.D.</h3><h5>Sebész, érsebész szakorvos, egyetemi
+                            docens</h5></a>
                 </div>
             </div>
         </div>
@@ -50,23 +55,25 @@ $first_part = $components[1];
 
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container medium-container d-flex align-items-center">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                    aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-            <div class="collapse navbar-collapse navbar-left" id="ftco-nav">
-                <ul class="navbar-nav m-auto">
+        <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse navbar-left" id="ftco-nav">
+            <ul class="navbar-nav m-auto">
                     <li class="nav-item <?php if ($first_part == "index.php") {
                         echo "active";
                     } else {
                         echo "noactive";
-                    } ?>" onclick="toggleActivity("index")"><a href="/index.php" class="nav-link pl-0">Kezdőlap</a></li>
-                    <li class="nav-item <?php if ($first_part == "bemutatkozas.php") echo "active"; ?>"><a href="/bemutatkozas.php"
-                                                                                                    class="nav-link">Bemutatkozás</a>
+                    } ?>" onclick="toggleActivity('index')"><a href="/index.php" class="nav-link pl-0">Kezdőlap</a></li>
+                    <li class="nav-item <?php if ($first_part == "bemutatkozas.php") echo "active"; ?>"><a
+                                href="/bemutatkozas.php"
+                                class="nav-link">Bemutatkozás</a>
                     </li>
                     <li class="nav-item dropdown <?php if ($first_part == "erbetegsegek.php") echo "active"; ?>">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"
+                           role="button" aria-haspopup="true" aria-expanded="false">
                             Érbetegségek
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -76,8 +83,6 @@ $first_part = $components[1];
                             <a class="dropdown-item" href="/visszerek.php">Visszeresség</a>
                         </div>
                     </li>
-
-
                     <li class="nav-item <?php if ($first_part == "arak.php") echo "active"; ?>"><a
                                 href="/arak.php" class="nav-link">Árak</a></li>
                     <li class="nav-item <?php if ($first_part == "blog.php") echo "active"; ?>"><a href="/blog.php"
@@ -92,12 +97,14 @@ $first_part = $components[1];
 
                     <form class="form-inline navbar-form navbar-right my-2 my-lg-0" action="/kereses.php" method="get">
                         <div class="form-group-sm">
-                            <input class="form-control mr-sm-2 input-sm" name="search" type="search" placeholder="Keresés" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="icon-search"></i></button>
-                        </div>
+                            <input class="form-control mr-sm-2 input-sm" name="search" type="search"
+                                   placeholder="Keresés" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                                        class="icon-search"></i></button>
+
                     </form>
-                </ul>
-            </div>
+            </ul>
+        </div>
         </div>
     </nav>
 
