@@ -53,20 +53,20 @@ $first_part = $components[1];
         </div>
     </div>
 
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="oi oi-menu"></span> Menu
-        </button>
-        <div class="collapse navbar-collapse navbar-left" id="ftco-nav">
-            <ul class="navbar-nav m-auto">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                    aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="nav navbar-nav m-auto">
                     <li class="nav-item <?php if ($first_part == "index.php") {
                         echo "active";
                     } else {
                         echo "noactive";
-                    } ?>" onclick="toggleActivity('index')"><a href="/index.php" class="nav-link pl-0">Kezdőlap</a></li>
+                    } ?>" onclick="toggleActivity('index')"><a href="/index.php" class="nav-link pl-0">Kezdőlap</a>
+                    </li>
                     <li class="nav-item <?php if ($first_part == "bemutatkozas.php") echo "active"; ?>"><a
                                 href="/bemutatkozas.php"
                                 class="nav-link">Bemutatkozás</a>
@@ -95,20 +95,20 @@ $first_part = $components[1];
                     <li class="nav-item <?php if ($first_part == "hivatkozasok.php") echo "active"; ?>"><a
                                 href="/hivatkozasok.php" class="nav-link">Hivatkozások</a></li>
 
-                    <form class="form-inline navbar-form navbar-right my-2 my-lg-0" action="/kereses.php" method="get">
-                        <div class="form-group-sm">
-                            <input class="form-control mr-sm-2 input-sm" name="search" type="search"
-                                   placeholder="Keresés" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
-                                        class="icon-search"></i></button>
+                    <li class="nav-item m-3">
+                        <form class="form-inline navbar-form navbar-right my-2 my-lg-0" action="/kereses.php"
+                              method="get">
+                            <div class="form-group-sm">
+                                <input class="form-control mr-sm-2 input-sm" name="search" type="search"
+                                       placeholder="Keresés" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
+                                            class="icon-search"></i></button>
 
-                    </form>
-            </ul>
-        </div>
-        </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
     </nav>
-
-
 </header>
 <script>
     $(document).ready(function () {

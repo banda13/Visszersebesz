@@ -1,20 +1,16 @@
 <?php include("header.php") ?>
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('../images/bg_1.jpg');"
-         data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('/images/blood.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <h1 class="mb-2 bread">Keresés</h1>
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.php" style="color: white">Kezdőlap <i
-                                    class="ion-ios-arrow-forward"></i></a></span> <span>Keresés <i
-                                class="ion-ios-arrow-forward"></i></span></p>
+                <h1 class="mb-2 bread" style="color: black">Keresés</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.php" style="color: black">Kezdőlap <i class="ion-ios-arrow-forward"></i></a></span> <span style="color: black">Keresés <i class="ion-ios-arrow-forward"></i></span></p>
             </div>
         </div>
     </div>
 </section>
-
 <div >
 <div class="container mt-5 mb-5" id="search">
     <?php

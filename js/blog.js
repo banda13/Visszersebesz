@@ -18,11 +18,11 @@ function read_all_post(container_id, limit = -1) {
                 if (i % 3 === 0) {
                     console.log("Append new row");
                     $("#" + container_id).append("<div id='row_" + row_id + "' class='row'></div>");
-                    $("#row_" + row_id).append("<div id='" + id + "' style='display: None' class='col-md-4'></div>");
+                    $("#row_" + row_id).append("<div id='" + id + "' class='col-md-6 col-sm-12 col-lg-4'></div>");
                 } else if (i % 3 === 1) {
-                    $("#row_" + row_id).append("<div id='" + id + "' style='display: None' class='col-md-4'></div>");
+                    $("#row_" + row_id).append("<div id='" + id + "' class='col-md-6 col-sm-12 col-lg-4'></div>");
                 } else {
-                    $("#row_" + row_id).append("<div id='" + id + "' style='display: None' class='col-md-4'></div>");
+                    $("#row_" + row_id).append("<div id='" + id + "' class='col-md-6 col-sm-12 col-lg-4'></div>");
                 }
 
 
