@@ -1,1 +1,1 @@
-<strong>http://visszersebesz.hu/</strong>
+<strong>https://visszersebesz.hu/</strong>
