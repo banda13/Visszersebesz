@@ -7,8 +7,8 @@ $first_part = $components[1];
 
 
 <!DOCTYPE html>
-<html lang="en">
-<header>
+<html lang="hu">
+<head>
     <title>Dr Szabó Gábor Viktor Ph.D.</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -109,7 +109,7 @@ $first_part = $components[1];
                 </ul>
             </div>
     </nav>
-</header>
+</head>
 <script>
     $(document).ready(function () {
         $("#navbardrop").click(function () {

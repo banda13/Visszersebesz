@@ -34,12 +34,19 @@ $resp = [];
     $mail->Password = "Dr4719req!";        // SMTP account password example
 
     $mail->setFrom("megkereses@visszersebesz.hu");
-    $mail->addAddress('info@visszersebesz.hu');     // Add a recipient
+    $mail->addAddress('visszersebesz@gmail.com');     // Add a recipient
 
     // Content
-    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->isHTML(true);
     $mail->Subject = $need;
-    $mail->Body = $message;
+
+    $body = '<html><body>';
+    $body .= '<h4>Név: '. $name . ' ' . $surname;
+    $body .= '<h4>Email: '. $email;
+    $body .= '<h4>Téma: '. $need;
+    $body .= '<h4>Üzenet: ';
+    $body .= "<div style='background: lightgray'>". $message . "</div>";
+    $mail->Body = $body;
 
     try {
         if ($mail->send()) {

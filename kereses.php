@@ -86,9 +86,9 @@
                         preg_match($main_title_pattern, $content, $main_titles);
 
 
-                        // remove empty elements from the array
-                        $main_titles = array_filter($main_titles, fn($value) => !is_null($value) && $value !== '');
-                        $sub_titles = array_filter($sub_titles, fn($value) => !is_null($value) && $value !== ''); //PHP 7.4+ required!
+                        // remove empty elements from the array - TODO refresh php
+                        //$main_titles = array_filter($main_titles, fn($value) => !is_null($value) && $value !== '');
+                        // $sub_titles = array_filter($sub_titles, fn($value) => !is_null($value) && $value !== ''); //PHP 7.4+ required!
 
                         // find the path for the file in which we found the match
                         $f = str_replace(".html", ".php", $filename);

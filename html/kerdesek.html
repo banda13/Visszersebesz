@@ -68,11 +68,10 @@
                                     <label for="form_need">Kérem válasszon témát *</label>
                                     <select id="form_need" name="need" class="form-control" required="required"
                                             data-error="Téma választása kötelező *">
-                                        <option value=""></option>
-                                        <option value="carotis">Carotis</option>
-                                        <option value="aneurysma">Aneurysma</option>
-                                        <option value="also vegtag">Alsó végtag</option>
-                                        <option value="almbulancia">Ambulancia</option>
+                                        <option value="Carotis">Carotis</option>
+                                        <option value="Aneurysma">Aneurysma</option>
+                                        <option value="Alsó végtag">Alsó végtag</option>
+                                        <option value="Ambulancia">Ambulancia</option>
                                     </select>
                                     <div class="help-block with-errors"></div>
                                 </div>
@@ -158,7 +157,6 @@
                 need: $('#form_need').val(),
                 message: $('#form_message').val(),
             },
-            setTimeout(email_error, 20000, "timeout")
         );
 
         posting.done(function (data) {
