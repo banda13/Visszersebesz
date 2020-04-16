@@ -2,7 +2,7 @@
 <html lang="en">
 <footer class="ftco-footer ftco-bg-dark">
     <div class="container">
-        <div class="row mb-5">
+        <div class="row justify-content-center mb-5">
             <div class="col-md-4">
                 <div class="ftco-footer-widget mb-5">
                     <h3 class="ftco-heading-3">Kérdése van?</h3>
