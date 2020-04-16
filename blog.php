@@ -1,3 +1,4 @@
+<?php include("metadata/blog-meta.html") ?>
 <?php include("header.php") ?>
 
 <?php

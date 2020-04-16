@@ -1,3 +1,4 @@
+<?php include("metadata/elerhetosegek-meta.html") ?>
 <?php include("header.php") ?>
 <link rel="stylesheet" href="/css/google_maps.css">
 

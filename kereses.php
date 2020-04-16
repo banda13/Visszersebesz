@@ -1,3 +1,4 @@
+<?php include("metadata/kereses-meta.html") ?>
 <?php include("header.php") ?>
 
 <section class="hero-wrap hero-wrap-2" style="background-image: url('/images/blood.jpg');" data-stellar-background-ratio="0.5">
