@@ -11,6 +11,8 @@ $first_part = $components[1];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/png" href="/images/logo-final.png"/>
+    <link rel="shortcut icon" type="image/png" href="/images/logo-final.png"/>
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -41,12 +43,14 @@ $first_part = $components[1];
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-    <div class="py-md-5 py-4 border-bottom">
+    <div class="py-md-3 py-4 border-bottom">
         <div class="container medium-container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
-                <div class="col-md-4 order-md-2 mb-2 mb-md-0 align-items-center text-center">
-                    <a href="/index.php"><h3>Dr Szabó Gábor Viktor Ph.D.</h3><h5>Sebész, érsebész szakorvos, egyetemi
-                            docens</h5></a>
+                <div class="col-md-6 order-md-2 mb-2 align-items-center text-center">
+                    <a href="/index.php"><h1>Érsebész, sebész szakorvos</h1><h5>Dr. Szabó Gábor Viktor Ph.D.<br>egyetemi docens</h5></a>
+                </div>
+                <div class="col-md-6 order-md-2 mb-2 align-items-center text-center">
+                    <img src="images/logo-final.png" width="160px" height="160px"/>
                 </div>
             </div>
         </div>
