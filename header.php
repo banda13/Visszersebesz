@@ -39,6 +39,9 @@ $first_part = $components[1];
         gtag('config', 'UA-163570933-1');
     </script>
 
+    <!-- SENTRY -->
+    <script src="https://browser.sentry-cdn.com/5.15.4/bundle.min.js" integrity="sha384-Nrg+xiw+qRl3grVrxJtWazjeZmUwoSt0FAVsbthlJ5OMpx0G08bqIq3b/v0hPjhB" crossorigin="anonymous">
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -117,7 +120,9 @@ $first_part = $components[1];
     $(document).ready(function () {
         $("#navbardrop").click(function () {
             window.location.href = '/erbetegsegek.php';
-        })
+        });
+
+        Sentry.init({ dsn: 'https://823ce0498fd344f6a30313df4f494421@o381432.ingest.sentry.io/5208753' });
     });
 </script>
 </html>
