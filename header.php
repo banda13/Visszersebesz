@@ -7,10 +7,11 @@ $first_part = $components[1];
 
 
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="hu" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <link rel="shortcut icon" type="image/png" href="/images/logo-final.png"/>
     <link rel="shortcut icon" type="image/png" href="/images/logo-final.png"/>
 
