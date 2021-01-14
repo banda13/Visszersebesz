@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="hu">
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 <body>
 
@@ -24,7 +26,8 @@
             <div class="w3-content w3-container w3-padding-64" id="q_and_a">
                 <h2 id="doctor-answers" class="w3-center">ORVOS VÁLASZOL</h2>
                 <p>
-                    Kedves Betegünk, tisztelt Érdeklődő! Ha betegséggel, beavatkozással kapcsolatos kérdése van, írjon, szabadidőmben szívesen válaszolok.
+                    Kedves Betegünk, tisztelt Érdeklődő! Ha betegséggel, beavatkozással kapcsolatos kérdése van, írjon,
+                    szabadidőmben szívesen válaszolok.
                 </p>
                 <hr>
                 <form id="contact-form" action="/api/send_mail2.php" method="post" role="form">
@@ -87,9 +90,14 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                                <input id="send_button" type="submit" class="btn btn-success btn-send" value="Üzenet elküldése"
+                                <div id="captacha" class="g-recaptcha"
+                                     data-sitekey="6LdzBioaAAAAAIvMu2azZ88Mg88BcYF-fPsfTVPd"></div>
+                                <br/>
+                                <input id="send_button" type="submit" class="btn btn-success btn-send"
+                                       value="Üzenet elküldése"
                                        name="formSubmit">
-                                <div id="loading_spinner" class="spinner-border text-primary" role="status" style="display: none;">
+                                <div id="loading_spinner" class="spinner-border text-primary" role="status"
+                                     style="display: none;">
                                     <span class="sr-only">Loading...</span>
                                 </div>
                             </div>
@@ -108,17 +116,18 @@
 </section>
 
 <script>
-    function startSpinningButton(id, spinner){
+
+    function startSpinningButton(id, spinner) {
         $("#" + id).prop('disabled', true);
         $("#" + spinner).show();
     }
 
-    function stopSpinningButton(id, spinner){
+    function stopSpinningButton(id, spinner) {
         $("#" + id).prop('disabled', false);
         $("#" + spinner).hide();
     }
 
-    function email_success(){
+    function email_success() {
         document.getElementById("email_response_container").innerHTML = "";
         $("#email_response_container").load("html/modals/email_success.html", function () {
             $('#email_response_modal').modal('show');
@@ -127,15 +136,25 @@
     }
 
     var last_reason = null;
-    function email_error(reason){
-        if(reason !== "timeout" || last_reason == null) {
+
+    function email_error(reason, details = null) {
+        if (reason !== "timeout" || last_reason == null) {
             last_reason = reason;
             document.getElementById("email_response_container").innerHTML = "";
             $("#email_response_container").load("html/modals/email_error.html", function () {
+                if (details) {
+                    $("#error-content").html("Az email elküldése nem sikerült. A hiba oka: <br> " + details);
+                } else {
+                    $("#error-content").html("Sajnos technikai hiba lépett fel, és az emailt nem sikerült elküldeni.\n" +
+                        "                    A hibáról értesítést kaptunk és kollégáink már dolgoznak a kijavításán.\n" +
+                        "                    Kérjük próbálkozzon később. Elnézést kérünk a kellemetlenségért és türelmét kérjük!\n" +
+                        "                Köszönjünk!")
+                }
                 $('#email_response_modal').modal('show');
             });
         }
     }
+
 
     $("#contact-form").submit(function (event) {
 
@@ -143,35 +162,41 @@
         event.preventDefault();
 
         startSpinningButton("send_button", "loading_spinner");
+        var $form = $(this);
+        var url = $form.attr('action');
 
-        /* get the action attribute from the <form action=""> element */
-        var $form = $(this),
-            url = $form.attr('action');
-
-        /* Send the data using post with element id name and name2*/
-        var posting = $.post(url,
+        $.post(url,
             {
                 name: $('#form_name').val(),
                 surname: $('#form_lastname').val(),
                 email: $('#form_email').val(),
                 need: $('#form_need').val(),
                 message: $('#form_message').val(),
-            },
-        );
-
-        posting.done(function (data) {
-            console.log(data);
-            if(data['success'] === true){
-                email_success();
+                token: $("[name='g-recaptcha-response']").val()
             }
-            else{
-                email_error("error");
+        ).done(function (data) {
+            console.log(data);
+            if (data['success'] === true) {
+                email_success();
+            } else {
+                if (data["error"] === "Unknown") {
+                    email_error("error");
+                    console.error(data["error_details"]);
+                } else {
+                    email_error("error", data['error']);
+                }
                 console.error(data['error']);
             }
-
+        }).fail(function (err) {
+            console.error("Unknown email error");
+            console.error(err);
+            email_error("error");
+        }).always(function () {
             stopSpinningButton("send_button", "loading_spinner");
             $("#contact-form")[0].reset();
+            grecaptcha.reset();
         });
+
     });
 
 </script>
