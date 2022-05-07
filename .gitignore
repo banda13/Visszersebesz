@@ -1,3 +1,4 @@
 /api/resources/secret.json
 /api/data/sent_emails/
+/backup/*
 .idea/
