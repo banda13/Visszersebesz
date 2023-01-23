@@ -26,7 +26,7 @@ function loadEnvironment()
 
     try {
 
-        $dotenv = Dotenv\Dotenv::createImmutable('/home/visszers/titok');
+        $dotenv = Dotenv\Dotenv::createImmutable('/home/visszers/titok/');
         $dotenv->load();
         $captcha_key = $_ENV['GOOGLE_RECAPTCHA_KEY'];
         $captcha_secret = $_ENV['GOOGLE_RECAPTCHA_SECRET'];
