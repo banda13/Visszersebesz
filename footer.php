@@ -20,7 +20,6 @@
                         <li><a href="/bemutatkozas.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Bemutatkozás</a></li>
                         <li><a href="/erbetegsegek.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Érbetegségek</a></li>
                         <li><a href="/arak.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Árak</a></li>
-                        <li><a href="/blog.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Blog</a></li>
                         <li><a href="/kerdesek.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Orvos válaszol</a></li>
                         <li><a href="/elerhetoseg.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Elérhetőségek</a></li>
                         <li><a href="/hivatkozasok.php"><span class="ion-ios-arrow-round-forward mr-2"></span>Hivatkozások</a></li>

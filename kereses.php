@@ -50,7 +50,7 @@
         }
 
         // check every html file in this directories
-        $paths = ['html/', 'blog/posts/', 'blog/posts_content/'];
+        $paths = ['html/'];
 
         $routs = scandir(".");
         $exclude_php = ["header.php", "footer.php"];

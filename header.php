@@ -92,8 +92,6 @@ $first_part = $components[1];
                     </li>
                     <li class="nav-item <?php if ($first_part == "arak.php") echo "active"; ?>"><a
                                 href="/arak.php" class="nav-link">Árak</a></li>
-                    <li class="nav-item <?php if ($first_part == "blog.php") echo "active"; ?>"><a href="/blog.php"
-                                                                                                   class="nav-link">Blog</a>
                     </li>
                     <li class="nav-item <?php if ($first_part == "kerdesek.php") echo "active"; ?>"><a
                                 href="/kerdesek.php" class="nav-link">Orvos válaszol</a></li>
