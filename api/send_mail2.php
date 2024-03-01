@@ -22,7 +22,7 @@ $from_addr = null;
 
 function loadEnvironment()
 {
-    global $resp, $captcha_key, $captcha_secret, $username, $password, $host, $target_addr, $from_addr;
+    global $resp, $captcha_key, $captcha_secret, $username, $password, $host, $target_addr, $from_addr, $test_token;
 
     try {
 
@@ -35,6 +35,7 @@ function loadEnvironment()
         $host = $_ENV["EMAIL_HOST"];
         $target_addr = $_ENV["EMAIL_TARGET_ADDR"];
         $from_addr = $_ENV["EMAIL_FROM_ADDR"];
+        $test_token = $_ENV["TEST_TOKEN"];
         return true;
     } catch (Exception $e) {
         $resp['error'] = "Sending email is not allowed";
@@ -45,7 +46,7 @@ function loadEnvironment()
 function checkCaptcha($userToken)
 {
     global $resp, $captcha_secret;
-    $url = 'https://www.google.com/recaptcha/api/siteverify';
+        $url = 'https://www.google.com/recaptcha/api/siteverify';
     $data = array(
         'secret' => $captcha_secret,
         'response' => $userToken
@@ -121,12 +122,14 @@ function sendMail($name, $surname, $email, $need, $message){
 
 
 if (loadEnvironment() == true) {
-    if (checkCaptcha($_POST["token"]) == true) {
+    if($POST["token"] == $test_token){
+        $result = sendMail("Teszt", "", "test@in.g", "Email teszt", "Minden ok!");
+    }
+    else if (checkCaptcha($_POST["token"]) == true) {
         $result = sendMail( $_POST["name"], $_POST["surname"],$_POST["email"], $_POST["need"], $_POST["message"]);
     }
 }
 echo(json_encode($resp));
-
 
 
 
