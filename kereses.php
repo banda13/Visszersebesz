@@ -48,6 +48,13 @@
         if (strlen($text) <= 3) {
             throw new Exception("<h1>Legalább 3 karaktert adjon meg a kereséshez</h1>");
         }
+        
+        $transliteration_map = [
+            'á' => 'a', 'é' => 'e', 'í' => 'i', 'ó' => 'o', 'ö' => 'o', 'ő' => 'o',
+            'ú' => 'u',
+            'Á' => 'A', 'É' => 'E', 'Í' => 'I', 'Ó' => 'O', 'Ö' => 'O', 'Ő' => 'O',
+            'Ú' => 'U',
+        ];
 
         // check every html file in this directories
         $paths = ['html/'];
@@ -55,7 +62,9 @@
         $routs = scandir(".");
         $exclude_php = ["header.php", "footer.php"];
         $response = array();
-
+        
+        // remove all special characters from the search text
+        $text = strtr($text, $transliteration_map);
 
         foreach ($paths as $path) {
             $files = scandir($path);
@@ -63,7 +72,10 @@
             // very studip way to implement full text search but at least as long as the site is not too long and dynamic its fast
             foreach ($files as $filename) {
                 if (endsWith($filename, '.html')) {
-                    $content = file_get_contents($path . $filename);
+                    $origin_content = file_get_contents($path . $filename);
+                    
+                    // remove special characters from the html content
+                    $content = strtr($origin_content, $transliteration_map);
 
                     //check if string occur in the current file and if yes get first position
                     $pos = stripos($content, $text);
@@ -75,17 +87,18 @@
                         }
 
                         //get the content of the current file until the occurence
-                        $content = substr($content, 0, $pos);
+                        $content = substr($origin_content, 0, $pos);
                         $sub_titles = array();
                         $main_titles = array();
                         $ids = array();
+                        
+                        
 
                         //Find the headers in the splitted text
                         $sub_title_pattern = "/<h[3-5] ?.*>(.*)<\/h[3-5]>/";
                         $main_title_pattern = "/<h[0-2] ?.*>(.*)<\/h[0-2]>/";
-                        preg_match($sub_title_pattern, $content, $sub_titles);
-                        preg_match($main_title_pattern, $content, $main_titles);
-
+                        preg_match($sub_title_pattern, $origin_content, $sub_titles);
+                        preg_match($main_title_pattern, $origin_content, $main_titles);
 
                         // remove empty elements from the array - TODO refresh php
                         //$main_titles = array_filter($main_titles, fn($value) => !is_null($value) && $value !== '');
@@ -170,6 +183,7 @@
             echo("<div onclick=" . $link . " class='card  background_on_hover m-2 p-3'>" . $r->getResponseText() . "</div><br>");
         }
     } catch (Exception $e) {
+        
         echo("<h1>" . $e->getMessage() . "</h1>");
     }
     ?>

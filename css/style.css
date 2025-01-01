@@ -13495,3 +13495,22 @@ readmore:hover:after {
 .iconGrowing-onHover:hover {
     transform: scale(1.1);
 }
+
+.m-5-desktop {
+    margin: 0;
+}
+
+.mx-5-desktop {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@media (min-width: 768px) {
+    .m-5-desktop {
+        margin: 5rem;
+    }
+    .mx-5-desktop {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
