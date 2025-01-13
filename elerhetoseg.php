@@ -1,5 +1,6 @@
 <?php include("metadata/elerhetosegek-meta.html") ?>
 <?php include("header.php") ?>
+<?php include("html/utils/consent.html") ?>
 <link rel="stylesheet" href="/css/google_maps.css">
 
 <?php echo file_get_contents("html/elerhetoseg.html"); ?>

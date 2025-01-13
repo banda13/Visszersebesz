@@ -1,0 +1,63 @@
+<div id="cookie-consent-banner" class="cookie-consent-banner">
+    <h3>Cookie beállítások</h3>
+    <p>Cookie-kat használunk, hogy a lehető legjobb felhasználói élményt nyújtsuk Önnek. Emellett lehetővé teszik számunkra a felhasználói viselkedés elemzését is, hogy folyamatosan javíthassuk a webhelyet az Ön számára.</p>
+    <button id="btn-accept-all" class="cookie-consent-button btn-success">Összes elfogadása</button>
+    <button id="btn-accept-some" class="cookie-consent-button btn-outline">Kiválsztottak elfogadása</button>
+    <button id="btn-reject-all" class="cookie-consent-button btn-grayscale">Összes elutasítása</button>
+    <div class="cookie-consent-options">
+        <label><input id="consent-necessary" type="checkbox" value="Necessary" checked disabled>Szükséges</label>
+        <label><input id="consent-analytics" type="checkbox" value="Analytics" checked>Analitika</label>
+        <label><input id="consent-preferences" type="checkbox" value="Preferences" checked>Preferenciák</label>
+        <label><input id="consent-marketing" type="checkbox" value="Marketing">Marketing</label>
+    </div>
+</div>
+
+<script>
+    function hideBanner() {
+        document.getElementById('cookie-consent-banner').style.display = 'none';
+    }
+
+    if (localStorage.getItem('consentMode') === null) {
+
+        document.getElementById('btn-accept-all').addEventListener('click', function() {
+            setConsent({
+                necessary: true,
+                analytics: true,
+                preferences: true,
+                marketing: true
+            });
+            hideBanner();
+        });
+        document.getElementById('btn-accept-some').addEventListener('click', function() {
+            setConsent({
+                necessary: true,
+                analytics: document.getElementById('consent-analytics').checked,
+                preferences: document.getElementById('consent-preferences').checked,
+                marketing: document.getElementById('consent-marketing').checked
+            });
+            hideBanner();
+        });
+        document.getElementById('btn-reject-all').addEventListener('click', function() {
+            setConsent({
+                necessary: false,
+                analytics: false,
+                preferences: false,
+                marketing: false
+            });
+            hideBanner();
+        });
+        document.getElementById('cookie-consent-banner').style.display = 'block';
+    }
+
+    function setConsent(consent) {
+        const consentMode = {
+            'functionality_storage': consent.necessary ? 'granted' : 'denied',
+            'security_storage': consent.necessary ? 'granted' : 'denied',
+            'ad_storage': consent.marketing ? 'granted' : 'denied',
+            'analytics_storage': consent.analytics ? 'granted' : 'denied',
+            'personalization_storage': consent.preferences ? 'granted' : 'denied',
+        };
+        gtag('consent', 'update', consentMode);
+        localStorage.setItem('consentMode', JSON.stringify(consentMode));
+    }
+</script>

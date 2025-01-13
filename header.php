@@ -26,8 +26,6 @@ $first_part = $components[1];
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/images.css">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163570933-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -35,10 +33,32 @@ $first_part = $components[1];
             dataLayer.push(arguments);
         }
 
-        gtag('js', new Date());
+        if (localStorage.getItem('consentMode') === null) {
+            gtag('consent', 'default', {
+                'ad_storage': 'denied',
+                'analytics_storage': 'denied',
+                'personalization_storage': 'denied',
+                'functionality_storage': 'denied',
+                'security_storage': 'denied',
+            });
+        } else {
+            gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+        }
 
-        gtag('config', 'UA-163570933-1');
+        if (localStorage.getItem('userId') != null) {
+            window.dataLayer.push({
+                'user_id': localStorage.getItem('userId')
+            });
+        }
     </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NTFDHSC3');</script>
+    <!-- End Google Tag Manager -->
 
     <!-- SENTRY -->
     <script src="https://browser.sentry-cdn.com/5.15.4/bundle.min.js" integrity="sha384-Nrg+xiw+qRl3grVrxJtWazjeZmUwoSt0FAVsbthlJ5OMpx0G08bqIq3b/v0hPjhB" crossorigin="anonymous">
