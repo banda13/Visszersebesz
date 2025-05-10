@@ -9,9 +9,9 @@
                     <div class="block-23 mb-1">
                         <a href="/kerdesek.php" class="btn btn-secondary px-4 py-3">Ingyenes üzenet</a>
                     </div>
-                    <div class="block-23 mb-1 mt-2">
+                    <!-- <div class="block-23 mb-1 mt-2">
                         <a href="https://foglaljorvost.hu/sebesz/dr-szabo-gabor-viktor/" class="btn btn-secondary px-4 py-3">Időpontfoglalás</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-md-4">
