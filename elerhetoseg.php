@@ -29,12 +29,15 @@
             // The location of Uluru
             const sote_uluru = {lat: 47.507146, lng: 19.013559};
             const vpmed_uluru = {lat: 47.561258, lng: 19.086339};
+            const rmc_uluru = {lat: 47.522653, lng: 19.015110};
 
             sote_map = new google.maps.Map(document.getElementById('map_sote'), {zoom: 17, center: sote_uluru});
             vpmed_map = new google.maps.Map(document.getElementById('map_vpmed'), {zoom: 17, center: vpmed_uluru});
+            rmc_map = new google.maps.Map(document.getElementById('map_rmc'), {zoom: 17, center: rmc_uluru});
 
             const sote_marker = new google.maps.Marker({position: sote_uluru, map: sote_map});
             const vpmed_marker = new google.maps.Marker({position: vpmed_uluru, map: vpmed_map});
+            const rmc_marker = new google.maps.Marker({position: rmc_uluru, map: rmc_map});
         }
 
         window.gMapsCallback = function () {

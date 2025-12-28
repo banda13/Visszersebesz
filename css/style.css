@@ -7156,6 +7156,10 @@ button.bg-dark:focus {
     background-color: #fff !important;
 }
 
+.bg-gray {
+    background-color: #808080 !important;
+}
+
 .bg-transparent {
     background-color: transparent !important;
 }
@@ -13593,4 +13597,18 @@ readmore:hover:after {
 
 .cookie-consent-options input {
     margin-right: 5px;
+}
+
+.overlay-box {
+  margin: 40px; /* The margin from the corner */
+  padding: 30px;
+  max-width: 500px;
+  /* Gray background with 50% occupancy/opacity */
+  background-color: rgba(50, 50, 50, 0.5); 
+  /* Modern blur effect for the image behind the box */
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  border-radius: 8px;
+  font-family: sans-serif;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
