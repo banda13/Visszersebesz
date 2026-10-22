@@ -15,13 +15,13 @@
 @media (max-width: 800px) {
     /* CSS that should be displayed if width is equal to or less than 800px goes here */
     div.carousel-custom {
-        background-image: url(../images/laser_cover_1.png)
+        background-image: url(../images/laser_cover_1.jpg)
     }
 }
 
 @media (min-width: 801px) {
     /* CSS that should be displayed if width is equal to or less than 800px goes here */
     div.carousel-custom {
-        background-image: url(../images/laser_cover_2.png)
+        background-image: url(../images/laser_cover_2.jpg)
     }
 }
