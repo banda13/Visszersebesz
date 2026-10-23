@@ -13616,7 +13616,7 @@ readmore:hover:after {
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* Badge-only headings on the contacts page: keep the line box as tall as the badge itself */
+/* Badge-only headings (contacts, prices): keep the line box as tall as the badges, as in quirks mode */
 .badge-heading {
     line-height: 0;
 }
@@ -13659,6 +13659,7 @@ img[src="/images/laser_varicose_vein.jpg"] {
 
 @media (max-width: 991.98px) {
     iframe[src="https://www.youtube.com/embed/4JYZTzi_DJ0"] {
+        display: block;
         height: 154px;
     }
 }
