@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <footer class="ftco-footer ftco-bg-dark">
     <div class="container">
         <div class="row justify-content-center mb-5">
@@ -42,7 +40,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 text-center" data-toggle="tooltip" data-placement="top" title="Created by Endy and Fjuzi">
-                <p>Dr. Szabó Gábor Viktor Ph.D Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </p>
+                <p>Dr. Szabó Gábor Viktor Ph.D. – Érsebész, Visszérsebész · Copyright &copy; <?= date('Y') ?> All rights reserved </p>
             </div>
         </div>
     </div>
@@ -62,4 +60,5 @@
 <script src="/js/main.js"></script>
 <script src="/js/scrolltop.js"></script>
 
+</body>
 </html>

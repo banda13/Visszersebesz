@@ -11285,20 +11285,23 @@ h5,
     position: relative;
 }
 
-.owl-carousel.home-slider .slider-item .slider-text h1 {
+.owl-carousel.home-slider .slider-item .slider-text h1,
+.owl-carousel.home-slider .slider-item .slider-text h2 {
     font-size: 50px;
     color: #000000;
     line-height: 1.2;
     font-weight: 300;
 }
 
-.owl-carousel.home-slider .slider-item .slider-text h1 span {
+.owl-carousel.home-slider .slider-item .slider-text h1 span,
+.owl-carousel.home-slider .slider-item .slider-text h2 span {
     display: block;
     color: #000000;
 }
 
 @media (max-width: 991.98px) {
-    .owl-carousel.home-slider .slider-item .slider-text h1 {
+    .owl-carousel.home-slider .slider-item .slider-text h1,
+    .owl-carousel.home-slider .slider-item .slider-text h2 {
         font-size: 30px;
     }
 }
@@ -13611,4 +13614,51 @@ readmore:hover:after {
   border-radius: 8px;
   font-family: sans-serif;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Badge-only headings on the contacts page: keep the line box as tall as the badge itself */
+.badge-heading {
+    line-height: 0;
+}
+
+/* Same for the two-badge heading (its line box follows the space between the badges) */
+h2.badge-heading-pair {
+    line-height: 33px;
+}
+
+h3.badge-heading-pair {
+    line-height: 22px;
+}
+
+/* The question form kept a 1em bottom margin while the page rendered in quirks mode */
+#contact-form {
+    margin-bottom: 1em;
+}
+
+/* Reference cards (300x120 px): image sizes the percentage width/height attributes produced in quirks mode */
+img[src="/images/semmelweis_logo.png"][width="30%"][height="60%"],
+img[src="/images/youtube_icon.png"][width="30%"][height="60%"] {
+    width: 78px;
+    height: 67px;
+}
+
+img[src="/images/youtube_icon.png"][width="45%"][height="60%"] {
+    width: 113px;
+    height: 62px;
+}
+
+img[src="/images/vpmed_logo.gif"][width="70%"][height="100%"] {
+    width: 199px;
+    height: 112px;
+}
+
+/* Laser surgery video and photo on the varicose vein page: keep the sizes they had in quirks mode */
+img[src="/images/laser_varicose_vein.jpg"] {
+    aspect-ratio: auto;
+}
+
+@media (max-width: 991.98px) {
+    iframe[src="https://www.youtube.com/embed/4JYZTzi_DJ0"] {
+        height: 154px;
+    }
 }

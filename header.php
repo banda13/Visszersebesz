@@ -3,19 +3,58 @@ $directoryURI = $_SERVER['REQUEST_URI'];
 $path = parse_url($directoryURI, PHP_URL_PATH);
 $components = explode('/', $path);
 $first_part = $components[1];
+
+$pages = require __DIR__ . '/metadata/pages.php';
+require_once __DIR__ . '/includes/schema.php';
+$page = $pages[$page_id];
+$canonical = SITE_URL . $page['path'];
+$og_image = SITE_URL . '/images/og/' . $page['og_image'] . '.jpg';
+$robots = empty($page['noindex'])
+    ? 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+    : 'noindex, follow';
+
+function e($text)
+{
+    return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+}
 ?>
-
-
 <!DOCTYPE html>
 <html lang="hu" prefix="og: https://ogp.me/ns#">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" type="image/png" href="/images/logo-final.png"/>
-    <link rel="shortcut icon" type="image/png" href="/images/logo-final.png"/>
+    <title><?= e($page['title']) ?></title>
+<?php if ($page['description']) { ?>
+    <meta name="description" content="<?= e($page['description']) ?>">
+<?php } ?>
+    <meta name="robots" content="<?= $robots ?>">
+    <meta name="author" content="<?= e(DOCTOR_NAME) ?>">
+    <link rel="canonical" href="<?= e($canonical) ?>">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <meta property="og:title" content="<?= e($page['title']) ?>" />
+<?php if ($page['description']) { ?>
+    <meta property="og:description" content="<?= e($page['description']) ?>" />
+<?php } ?>
+    <meta property="og:type" content="<?= $page['og_type'] ?? 'website' ?>" />
+    <meta property="og:locale" content="hu_HU" />
+    <meta property="og:site_name" content="<?= e(SITE_NAME) ?>" />
+    <meta property="og:url" content="<?= e($canonical) ?>" />
+    <meta property="og:image" content="<?= e($og_image) ?>" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="<?= e(DOCTOR_NAME) ?> – érsebész, visszérsebész" />
+    <meta name="twitter:card" content="summary_large_image">
+<?php if (!empty($page['extra_head'])) { ?>
+    <?= $page['extra_head'] ?>
+
+<?php } ?>
+
+    <link rel="icon" type="image/png" href="/images/logo-final.png"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/owl.carousel.min.css">
@@ -60,21 +99,30 @@ $first_part = $components[1];
     })(window,document,'script','dataLayer','GTM-NTFDHSC3');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- SENTRY -->
-    <script src="https://browser.sentry-cdn.com/5.15.4/bundle.min.js" integrity="sha384-Nrg+xiw+qRl3grVrxJtWazjeZmUwoSt0FAVsbthlJ5OMpx0G08bqIq3b/v0hPjhB" crossorigin="anonymous">
+    <!-- SENTRY (async, initialised once loaded) -->
+    <script src="https://browser.sentry-cdn.com/5.15.4/bundle.min.js" integrity="sha384-Nrg+xiw+qRl3grVrxJtWazjeZmUwoSt0FAVsbthlJ5OMpx0G08bqIq3b/v0hPjhB" crossorigin="anonymous" async
+            onload="Sentry.init({ dsn: 'https://823ce0498fd344f6a30313df4f494421@o381432.ingest.sentry.io/5208753' });">
     </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
+    <?= schema_script($page_id, $page) ?>
+
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTFDHSC3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <div class="py-md-3 py-4 border-bottom">
         <div class="container medium-container">
             <div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
                 <div class="col-md-6 order-md-2 mb-2 align-items-center text-center">
-                    <a href="/index.php"><h1>Érsebész, sebész szakorvos</h1><h5>Dr. Szabó Gábor Viktor Ph.D.<br>egyetemi docens</h5></a>
+                    <a href="/index.php"><p class="h1">Érsebész, sebész szakorvos</p><p class="h5">Dr. Szabó Gábor Viktor Ph.D.<br>egyetemi docens</p></a>
                 </div>
                 <div class="col-md-6 order-md-2 mb-2 align-items-center text-center">
-                    <img src="images/logo-final.png" width="160px" height="160px"/>
+                    <img src="images/logo-final.png" width="160px" height="160px" alt="Dr. Szabó Gábor Viktor érsebész logó"/>
                 </div>
             </div>
         </div>
@@ -99,7 +147,7 @@ $first_part = $components[1];
                                 class="nav-link">Bemutatkozás</a>
                     </li>
                     <li class="nav-item dropdown <?php if ($first_part == "erbetegsegek.php") echo "active"; ?>">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"
+                        <a class="nav-link dropdown-toggle" href="/erbetegsegek.php" id="navbardrop" data-toggle="dropdown"
                            role="button" aria-haspopup="true" aria-expanded="false">
                             Érbetegségek
                         </a>
@@ -112,7 +160,6 @@ $first_part = $components[1];
                     </li>
                     <li class="nav-item <?php if ($first_part == "arak.php") echo "active"; ?>"><a
                                 href="/arak.php" class="nav-link">Árak</a></li>
-                    </li>
                     <li class="nav-item <?php if ($first_part == "kerdesek.php") echo "active"; ?>"><a
                                 href="/kerdesek.php" class="nav-link">Orvos válaszol</a></li>
                     <li class="nav-item <?php if ($first_part == "elerhetoseg.php") echo "active"; ?>"><a
@@ -128,22 +175,18 @@ $first_part = $components[1];
                                        placeholder="Keresés" aria-label="Search">
                                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i
                                             class="icon-search"></i></button>
-
+                            </div>
                         </form>
                     </li>
                 </ul>
             </div>
+        </div>
     </nav>
-</head>
+
 <script>
     $(document).ready(function () {
         $("#navbardrop").click(function () {
             window.location.href = '/erbetegsegek.php';
         });
-
-        Sentry.init({ dsn: 'https://823ce0498fd344f6a30313df4f494421@o381432.ingest.sentry.io/5208753' });
     });
 </script>
-</html>
-
-

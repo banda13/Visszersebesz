@@ -1,4 +1,4 @@
-<?php include("metadata/kerdesek-meta.html") ?>
+<?php $page_id = "kerdesek"; ?>
 <?php include("header.php") ?>
 <?php include("html/utils/consent.html") ?>
 

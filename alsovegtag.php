@@ -1,4 +1,4 @@
-<?php include("metadata/alsovegtag-meta.html") ?>
+<?php $page_id = "alsovegtag"; ?>
 <?php include("header.php") ?>
 <?php include("html/utils/consent.html") ?>
 
