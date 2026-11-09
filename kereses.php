@@ -1,4 +1,4 @@
-<?php include("metadata/kereses-meta.html") ?>
+<?php $page_id = "kereses"; ?>
 <?php include("header.php") ?>
 <?php include("html/utils/consent.html") ?>
 
@@ -40,7 +40,7 @@
         }
     }
 
-    $text = $_GET['search'];
+    $text = $_GET['search'] ?? '';
     $lookups = json_decode(file_get_contents("api/resources/search_lookup.json"));
 
     function search($text)
@@ -96,7 +96,7 @@
                         
 
                         //Find the headers in the splitted text
-                        $sub_title_pattern = "/<h[3-5] ?.*>(.*)<\/h[3-5]>/";
+                        $sub_title_pattern = "/<h(?:[3-5]|2 class=\"h5\") ?.*>(.*)<\/h[2-5]>/";
                         $main_title_pattern = "/<h[0-2] ?.*>(.*)<\/h[0-2]>/";
                         preg_match($sub_title_pattern, $origin_content, $sub_titles);
                         preg_match($main_title_pattern, $origin_content, $main_titles);
@@ -177,7 +177,7 @@
 
     <?php
     try {
-        echo("<h1>A keresett kifejezés: $text</h1><hr>");
+        echo("<h1>A keresett kifejezés: " . htmlspecialchars($text, ENT_QUOTES, 'UTF-8') . "</h1><hr>");
         $response = search($text);
         foreach ($response as $r) {
             $link = "location.href='/" . $r->getResponseFile() . "'";

@@ -1,11 +1,8 @@
-<?php include("metadata/elerhetosegek-meta.html") ?>
+<?php $page_id = "elerhetoseg"; ?>
 <?php include("header.php") ?>
 <?php include("html/utils/consent.html") ?>
-<link rel="stylesheet" href="/css/google_maps.css">
 
 <?php echo file_get_contents("html/elerhetoseg.html"); ?>
-
-<?php include("footer.php") ?>
 
 <script>
     $(document).ready(function () {
@@ -49,5 +46,4 @@
     });
 </script>
 
-
-
+<?php include("footer.php") ?>

@@ -1,4 +1,4 @@
-<?php include("metadata/ertagulatok-meta.html") ?>
+<?php $page_id = "ertagulatok"; ?>
 <?php include("header.php") ?>
 <?php include("html/utils/consent.html") ?>
 

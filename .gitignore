@@ -2,3 +2,6 @@
 /api/data/sent_emails/
 /backup/*
 .idea/
+
+# original, uncompressed image sources (not deployed)
+/images/_originals/

@@ -1,4 +1,4 @@
-<?php include("metadata/arak-meta.html") ?>
+<?php $page_id = "arak"; ?>
 <?php include("header.php") ?>
 <?php include("html/utils/consent.html") ?>
 

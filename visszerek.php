@@ -1,4 +1,4 @@
-<?php include("metadata/visszerek-meta.html") ?>
+<?php $page_id = "visszerek"; ?>
 <?php include("header.php") ?>
 <?php include("html/utils/consent.html") ?>
 
